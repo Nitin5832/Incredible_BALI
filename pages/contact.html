@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact &amp; Register – Incredible Bali</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap"><span>🌴 Official Bali Tourism Portal</span><div><a href="#">FAQs</a><a href="contact.html">Contact</a></div></div>
+</div>
+
+<header>
+  <div class="wrap">
+    <div class="nav">
+      <a href="../index.html" class="logo">
+        <div class="logo-icon">🏖️</div>
+        <div><strong>Incredible Bali</strong><span>Island of the Gods</span></div>
+      </a>
+      <div class="nav-links">
+        <a href="../index.html">Home</a><a href="destinations.html">Destinations</a>
+        <a href="packages.html">Packages</a><a href="services.html">Services</a>
+        <a href="about.html">About Bali</a><a href="contact.html" class="on">Contact</a>
+      </div>
+      <div style="display:flex;gap:10px;align-items:center;">
+        <a href="contact.html" class="btn btn-green" style="padding:9px 18px;font-size:13px;">Plan Trip</a>
+        <button class="burger" onclick="document.getElementById('mob').classList.toggle('open')"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="mob-nav" id="mob">
+  <a href="../index.html">Home</a><a href="destinations.html">Destinations</a>
+  <a href="packages.html">Packages</a><a href="services.html">Services</a>
+  <a href="about.html">About Bali</a><a href="contact.html">Contact</a>
+</div>
+
+<div class="banner">
+  <div class="wrap">
+    <div class="crumb"><a href="../index.html">Home</a> › <span>Contact &amp; Register</span></div>
+    <h1>Contact Us &amp; Register</h1>
+    <p>Create your account, send us a message or request a custom Bali itinerary — we respond within 24 hours.</p>
+  </div>
+</div>
+
+<!-- REGISTER + FEEDBACK FORMS SIDE BY SIDE -->
+<section class="sec">
+  <div class="wrap">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start;">
+
+      <!-- REGISTER FORM -->
+      <div class="form-box">
+        <h2>Create Your Account</h2>
+        <p class="sub">Join Incredible Bali to save favourites, track bookings and get personalised recommendations.</p>
+        <div class="frow2">
+          <div class="fg"><label>First Name *</label><input type="text" placeholder="e.g. Priya"/></div>
+          <div class="fg"><label>Last Name *</label><input type="text" placeholder="e.g. Sharma"/></div>
+        </div>
+        <div class="fg"><label>Email Address *</label><input type="email" placeholder="priya@email.com"/></div>
+        <div class="frow2">
+          <div class="fg"><label>Password *</label><input type="password" placeholder="Min. 8 characters"/></div>
+          <div class="fg"><label>Confirm Password *</label><input type="password" placeholder="Re-enter password"/></div>
+        </div>
+        <div class="fg"><label>Phone Number</label><input type="tel" placeholder="+44 7700 900000"/></div>
+        <div class="frow2">
+          <div class="fg">
+            <label>Nationality</label>
+            <select><option>Select country…</option><option>British</option><option>Indian</option><option>American</option><option>Australian</option><option>Other</option></select>
+          </div>
+          <div class="fg"><label>Date of Birth</label><input type="date"/></div>
+        </div>
+        <div class="fg">
+          <label>Travel Interests</label>
+          <select><option>Select preference…</option><option>Beaches &amp; Water Sports</option><option>Temples &amp; Culture</option><option>Adventure &amp; Trekking</option><option>Wellness &amp; Yoga</option><option>Family Travel</option><option>Honeymoon / Romance</option></select>
+        </div>
+        <div class="fg">
+          <label style="display:flex;align-items:center;gap:8px;font-weight:400;cursor:pointer;">
+            <input type="checkbox" style="width:15px;height:15px;flex-shrink:0;"/>
+            I agree to the <a href="#" style="color:var(--green)">Terms of Use</a> and <a href="#" style="color:var(--green)">Privacy Policy</a>
+          </label>
+        </div>
+        <button class="fsub" onclick="document.getElementById('reg-ok').style.display='block'">Create My Account</button>
+        <div class="ok" id="reg-ok">✅ Account created! Welcome to Incredible Bali.</div>
+        <p style="text-align:center;font-size:13px;color:var(--grey);margin-top:14px;">Already registered? <a href="#" style="color:var(--green)">Sign in</a></p>
+      </div>
+
+      <!-- RIGHT COLUMN: FEEDBACK + INFO -->
+      <div style="display:flex;flex-direction:column;gap:22px;">
+
+        <!-- FEEDBACK FORM -->
+        <div class="form-box">
+          <h2>Send a Message / Feedback</h2>
+          <p class="sub">General enquiry, booking help or feedback — we reply within 24 hours.</p>
+          <div class="frow2">
+            <div class="fg"><label>Full Name *</label><input type="text" placeholder="Your name"/></div>
+            <div class="fg"><label>Email *</label><input type="email" placeholder="your@email.com"/></div>
+          </div>
+          <div class="fg">
+            <label>Subject</label>
+            <select><option>General Enquiry</option><option>Booking Assistance</option><option>Package Information</option><option>Visa &amp; Entry</option><option>Feedback &amp; Suggestions</option><option>Complaint</option></select>
+          </div>
+          <div class="fg"><label>Message *</label><textarea placeholder="Tell us how we can help…"></textarea></div>
+          <div class="fg">
+            <label>Rate Your Experience</label>
+            <div style="display:flex;gap:6px;flex-wrap:wrap;">
+              <button class="fb" onclick="rate(this)">★ 1</button>
+              <button class="fb" onclick="rate(this)">★★ 2</button>
+              <button class="fb" onclick="rate(this)">★★★ 3</button>
+              <button class="fb" onclick="rate(this)">★★★★ 4</button>
+              <button class="fb on" onclick="rate(this)">★★★★★ 5</button>
+            </div>
+          </div>
+          <button class="fsub" onclick="document.getElementById('msg-ok').style.display='block'">Send Message</button>
+          <div class="ok" id="msg-ok">✅ Message sent! We'll reply within 24 hours.</div>
+        </div>
+
+        <!-- CONTACT INFO BOX -->
+        <div style="background:var(--cream);border:1px solid var(--border);border-radius:12px;padding:22px;">
+          <h4 style="font-size:14px;margin-bottom:12px;">📞 Contact Details</h4>
+          <p style="font-size:13px;color:var(--grey);margin-bottom:8px;">📧 hello@incrediblebali.gov.id</p>
+          <p style="font-size:13px;color:var(--grey);margin-bottom:8px;">📞 +44 20 7946 0958</p>
+          <p style="font-size:13px;color:var(--grey);margin-bottom:8px;">📍 Tourism Centre, Denpasar, Bali 80235</p>
+          <p style="font-size:13px;color:var(--grey);">🕐 Mon–Fri 8am–6pm · Sat 9am–3pm</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- PLAN MY TRIP FORM -->
+    <div style="margin-top:48px;">
+      <div class="center" style="margin-bottom:28px;">
+        <span class="label">Custom Itinerary</span>
+        <h2>Plan My Bali Trip</h2>
+        <p class="sub" style="margin:8px auto 0">Tell us your dream — our specialists build your custom itinerary free of charge.</p>
+      </div>
+      <div style="max-width:660px;margin:0 auto;">
+        <div class="form-box">
+          <div class="frow2">
+            <div class="fg"><label>Full Name *</label><input type="text" placeholder="Your name"/></div>
+            <div class="fg"><label>Email *</label><input type="email" placeholder="your@email.com"/></div>
+          </div>
+          <div class="frow2">
+            <div class="fg"><label>Departure Date</label><input type="date"/></div>
+            <div class="fg"><label>Return Date</label><input type="date"/></div>
+          </div>
+          <div class="frow2">
+            <div class="fg"><label>Adults</label><select><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5+</option></select></div>
+            <div class="fg"><label>Children</label><select><option selected>0</option><option>1</option><option>2</option><option>3+</option></select></div>
+          </div>
+          <div class="frow2">
+            <div class="fg">
+              <label>Trip Type</label>
+              <select><option>Honeymoon / Romance</option><option>Family Holiday</option><option>Adventure</option><option>Wellness Retreat</option><option>Solo Travel</option></select>
+            </div>
+            <div class="fg">
+              <label>Budget (per person)</label>
+              <select><option>Under £500</option><option>£500–£1,000</option><option selected>£1,000–£2,000</option><option>£2,000–£3,500</option><option>£3,500+</option></select>
+            </div>
+          </div>
+          <div class="fg"><label>Special Requests</label><textarea placeholder="e.g. We'd love a sunset dinner, surf lessons and a temple tour…"></textarea></div>
+          <button class="fsub" onclick="document.getElementById('plan-ok').style.display='block'">Submit Trip Request →</button>
+          <div class="ok" id="plan-ok">✅ Request received! We'll send your custom Bali itinerary within 48 hours.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="nl"><div class="wrap"><h2>Stay Inspired</h2><p>Subscribe for Bali travel tips and exclusive deals.</p><div class="nl-row"><input type="email" placeholder="Your email…"/><button class="btn btn-white">Subscribe</button></div></div></section>
+
+<footer><div class="wrap"><div class="fgrid">
+  <div class="fbrand"><div class="logo"><div class="logo-icon">🏖️</div><div><strong style="color:#fff;font-family:'Playfair Display',serif;font-size:16px;">Incredible Bali</strong><span style="font-size:10px;color:rgba(255,255,255,.4);">Island of the Gods</span></div></div><p>Official Bali Tourism portal by the Ministry of Tourism, Republic of Indonesia.</p></div>
+  <div class="fcol"><h4>Explore</h4><a href="destinations.html">Destinations</a><a href="destinations.html">Beaches</a></div>
+  <div class="fcol"><h4>Travel</h4><a href="packages.html">Packages</a><a href="services.html">Services</a></div>
+  <div class="fcol"><h4>Info</h4><a href="about.html">About Bali</a><a href="contact.html">Contact</a></div>
+</div><div class="fbot"><span>© 2025 Incredible Bali · Ministry of Tourism, Republic of Indonesia</span></div></div></footer>
+<button id="top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+  window.addEventListener('scroll', () => document.getElementById('top-btn').classList.toggle('show', window.scrollY > 380));
+  function rate(el) {
+    el.closest('div').querySelectorAll('.fb').forEach(b => b.classList.remove('on'));
+    el.classList.add('on');
+  }
+</script>
+</body>
+</html>
