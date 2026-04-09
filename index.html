@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Incredible Bali – Island of the Gods</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<a href="#main-content" class="skip-link">Skip to main content</a>
 <!-- TOP BAR -->
 <div class="topbar">
   <div class="wrap">
@@ -22,11 +21,11 @@
 <header>
   <div class="wrap">
     <div class="nav">
-      <a href="index.html" class="logo" aria-label="Incredible Bali - Go to homepage">
-        <div class="logo-icon" aria-hidden="true">🌺</div>
+      <a href="index.html" class="logo">
+        <div class="logo-icon">🏖️</div>
         <div><strong>Incredible Bali</strong><span>Island of the Gods</span></div>
       </a>
-      <nav aria-label="Main navigation"><div class="nav-links-inner" style="display:flex;gap:2px;">
+      <div class="nav-links">
         <a href="index.html" class="on">Home</a>
         <a href="pages/destinations.html">Destinations</a>
         <a href="pages/packages.html">Packages</a>
@@ -36,7 +35,7 @@
       </div>
       <div style="display:flex;gap:10px;align-items:center;">
         <a href="pages/contact.html" class="btn btn-green" style="padding:9px 18px;font-size:13px;">Plan Trip</a>
-        <button class="burger" aria-label="Open navigation menu" onclick="document.getElementById('mob').classList.toggle('open')">
+        <button class="burger" onclick="document.getElementById('mob').classList.toggle('open')">
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -56,13 +55,13 @@
 <!-- HERO — Real photo: Bali Rice Terraces (Unsplash free) -->
 <section class="hero">
   <div class="hero-bg">
-    <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1600&q=80" alt="Bali Ubud Rice Terraces"/>
+    <img src="https://images.unsplash.com/photo-1553902000-e036b7d05af5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Tanah Lot, Bali">
   </div>
   <div class="hero-shade"></div>
   <div class="wrap">
     <div class="hero-text">
       <div class="hero-tag">✦ Official Bali Tourism Portal</div>
-      <h1>Welcome to<br/><em>Incredible Bali</em></h1>
+      <h1>Welcome to<br><em>Incredible Bali</em></h1>
       <p>The Island of the Gods — ancient temples, emerald rice terraces, crystal waters and a culture unlike anywhere on Earth.</p>
       <div class="hero-btns">
         <a href="pages/destinations.html" class="btn btn-gold">Explore Destinations</a>
@@ -83,20 +82,20 @@
   <div class="wrap">
     <div class="s-row">
       <div class="s-field">
-        <label for="s-region">Where in Bali?</label>
-        <select id="s-region"><option>All Regions</option><option>South Bali</option><option>Ubud / Central</option><option>North Bali</option><option>Nusa Islands</option></select>
+        <label>Where in Bali?</label>
+        <select><option>All Regions</option><option>South Bali</option><option>Ubud / Central</option><option>North Bali</option><option>Nusa Islands</option></select>
       </div>
       <div class="s-field">
-        <label for="s-exp">Experience</label>
-        <select id="s-exp"><option>All Types</option><option>Beaches</option><option>Temples</option><option>Adventure</option><option>Wellness</option></select>
+        <label>Experience</label>
+        <select><option>All Types</option><option>Beaches</option><option>Temples</option><option>Adventure</option><option>Wellness</option></select>
       </div>
       <div class="s-field">
-        <label for="s-date">Travel Date</label>
-        <input type="date" id="s-date"/>
+        <label>Travel Date</label>
+        <input type="date">
       </div>
       <div class="s-field">
-        <label for="s-travellers">Travellers</label>
-        <select id="s-travellers"><option>2 People</option><option>Solo</option><option>3</option><option>Family 4+</option></select>
+        <label>Travellers</label>
+        <select><option>2 People</option><option>Solo</option><option>3</option><option>Family 4+</option></select>
       </div>
       <button class="btn btn-green">Search</button>
     </div>
@@ -118,7 +117,7 @@
       <!-- Ubud — real Unsplash photo -->
       <div class="card">
         <div class="thumb">
-          <img src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=600&q=80" alt="Ubud Bali"/>
+          <img src="https://images.unsplash.com/photo-1652451160926-6d0f2bb16cfe?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Ubud Bali">
           <div class="reg">Central Bali</div>
           <div class="cap"><strong>Ubud</strong><span>Cultural Heart of Bali</span></div>
         </div>
@@ -135,7 +134,7 @@
       <!-- Tanah Lot — real Unsplash photo -->
       <div class="card">
         <div class="thumb">
-          <img src="https://images.unsplash.com/photo-1562614278-1bc29e92cd06?w=600&q=80" alt="Tanah Lot Temple"/>
+          <img src="https://images.unsplash.com/photo-1624935851312-845758a99160?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA==" alt="Tanah Lot Temple">
           <div class="reg">South Bali</div>
           <div class="cap"><strong>Tanah Lot</strong><span>Iconic Sea Temple</span></div>
         </div>
@@ -152,7 +151,7 @@
       <!-- Mount Batur — real Unsplash photo -->
       <div class="card">
         <div class="thumb">
-          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" alt="Mount Batur Bali"/>
+          <img src="https://images.unsplash.com/photo-1712078953326-346a472bddb0?q=80&w=2944&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA==" alt="Mount Batur Bali">
           <div class="reg">North Bali</div>
           <div class="cap"><strong>Mount Batur</strong><span>Sunrise Volcano Hike</span></div>
         </div>
@@ -169,7 +168,7 @@
       <!-- Nusa Penida — real Unsplash photo -->
       <div class="card">
         <div class="thumb">
-          <img src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=600&q=80" alt="Nusa Penida Beach"/>
+          <img src="https://images.unsplash.com/photo-1566987827585-6c556cc32848?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA==" alt="Nusa Penida Beach">
           <div class="reg">Nusa Islands</div>
           <div class="cap"><strong>Nusa Penida</strong><span>Dramatic Cliffs &amp; Beaches</span></div>
         </div>
@@ -186,7 +185,7 @@
       <!-- Kuta Beach — real Unsplash photo -->
       <div class="card">
         <div class="thumb">
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Kuta Beach Bali"/>
+          <img src="https://images.unsplash.com/photo-1567520595708-2fb411a6ce88?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Kuta Beach Bali">
           <div class="reg">South Bali</div>
           <div class="cap"><strong>Kuta &amp; Seminyak</strong><span>Surf, Sun &amp; Nightlife</span></div>
         </div>
@@ -203,7 +202,7 @@
       <!-- Tegalalang — real Unsplash photo -->
       <div class="card">
         <div class="thumb">
-          <img src="https://images.unsplash.com/photo-1604999333679-b86d54738315?w=600&q=80" alt="Tegalalang Rice Terraces"/>
+          <img src="https://images.unsplash.com/photo-1735991087874-febd3c05544e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Tegalalang Rice Terraces">
           <div class="reg">Central Bali</div>
           <div class="cap"><strong>Tegalalang</strong><span>UNESCO Rice Terraces</span></div>
         </div>
@@ -223,6 +222,7 @@
 
 <!-- STATS BAND -->
 <section class="stats-band">
+  <h2>Tourism Highlights</h2>
   <div class="wrap">
     <div class="stats-row">
       <div><span class="n">20,000+</span><span class="l">Hindu Temples</span></div>
@@ -307,16 +307,16 @@
     <h2 style="margin-bottom:22px;">Bali in Pictures</h2>
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;">
       <div style="height:220px;border-radius:10px;overflow:hidden;">
-        <img src="https://images.unsplash.com/photo-1539367628448-4bc5c9d171c8?w=400&q=80" alt="Uluwatu Temple Bali"/>
+        <img src="https://plus.unsplash.com/premium_photo-1697729993004-7fd519d6c30b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Uluwatu Temple Bali">
       </div>
       <div style="height:220px;border-radius:10px;overflow:hidden;">
-        <img src="https://images.unsplash.com/photo-1531761535209-180857e963b9?w=400&q=80" alt="Bali Waterfall"/>
+        <img src="https://plus.unsplash.com/premium_photo-1668916098893-bf600cc702f7?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Bali Waterfall">
       </div>
       <div style="height:220px;border-radius:10px;overflow:hidden;">
-        <img src="https://images.unsplash.com/photo-1504701954957-2010ec3bcec1?w=400&q=80" alt="Bali Diving"/>
+        <img src="https://plus.unsplash.com/premium_photo-1737486745828-2e4e841ab568?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Bali Diving">
       </div>
       <div style="height:220px;border-radius:10px;overflow:hidden;">
-        <img src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=400&q=80" alt="Bali Rice Fields"/>
+        <img src="https://plus.unsplash.com/premium_photo-1721311166723-5c408da54364?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Bali Rice Fields">
       </div>
     </div>
   </div>
@@ -356,11 +356,12 @@
     <h2>Stay Inspired</h2>
     <p>Subscribe for Bali travel tips, festival dates and exclusive deals.</p>
     <div class="nl-row">
-      <input type="email" id="nl-email" aria-label="Email address for newsletter" placeholder="Your email address…"/>
+      <input type="email" placeholder="Your email address…">
       <button class="btn btn-white">Subscribe</button>
     </div>
   </div>
 </section>
+
 
 <!-- FOOTER -->
 <footer>
@@ -368,26 +369,33 @@
     <div class="fgrid">
       <div class="fbrand">
         <div class="logo">
-          <div class="logo-icon" aria-hidden="true">🌺</div>
-          <div><strong style="color:#fff;font-family:'Playfair Display',serif;font-size:16px;">Incredible Bali</strong><span style="font-size:13px;color:rgba(255,255,255,.55);">Island of the Gods</span></div>
+          <div class="logo-icon">🏖️</div>
+          <div>
+            <strong style="color:#fff;font-family:'Playfair Display',serif;font-size:16px;">
+              Incredible Bali
+            </strong>
+            <span style="font-size:10px;color:rgba(255,255,255,.4);">
+              Island of the Gods
+            </span>
+          </div>
         </div>
         <p>Official Bali Tourism portal by the Ministry of Tourism, Republic of Indonesia.</p>
       </div>
       <div class="fcol">
-        <h4>Explore</h4>
+        <h3>Explore</h3>
         <a href="pages/destinations.html">Destinations</a>
         <a href="pages/destinations.html">Temples</a>
         <a href="pages/destinations.html">Beaches</a>
         <a href="pages/destinations.html">Rice Terraces</a>
       </div>
       <div class="fcol">
-        <h4>Travel</h4>
+        <h3>Travel</h3>
         <a href="pages/packages.html">Packages</a>
         <a href="pages/services.html">Services</a>
         <a href="pages/services.html">Visa Info</a>
       </div>
       <div class="fcol">
-        <h4>Information</h4>
+        <h3>Information</h3>
         <a href="pages/about.html">About Bali</a>
         <a href="pages/contact.html">Contact Us</a>
         <a href="#">Privacy Policy</a>
@@ -395,13 +403,15 @@
     </div>
     <div class="fbot">
       <span>© 2025 Incredible Bali · Ministry of Tourism, Republic of Indonesia</span>
-      <span>Images: Unsplash (royalty-free) · <a href="#" style="color:rgba(255,255,255,.3);">Attributions</a></span>
+      <span>
+        Images: Unsplash (royalty-free) · 
+        <a href="#" style="color:rgba(255,255,255,.3);">Attributions</a>
+      </span>
     </div>
   </div>
 </footer>
 
-</main>
-<button id="top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+<button id="top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
 <script>
   window.addEventListener('scroll', () => {
