@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Destinations – Incredible Bali</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/style.css"/>
 </head>
 <body>
 
@@ -16,11 +16,11 @@
 <header>
   <div class="wrap">
     <div class="nav">
-      <a href="../index.html" class="logo">
-        <div class="logo-icon">🏖️</div>
+      <a href="../index.html" class="logo" aria-label="Incredible Bali - Go to homepage">
+        <div class="logo-icon" aria-hidden="true">🌺</div>
         <div><strong>Incredible Bali</strong><span>Island of the Gods</span></div>
       </a>
-      <div class="nav-links">
+      <nav aria-label="Main navigation"><div class="nav-links-inner" style="display:flex;gap:2px;">
         <a href="../index.html">Home</a>
         <a href="destinations.html" class="on">Destinations</a>
         <a href="packages.html">Packages</a>
@@ -30,12 +30,13 @@
       </div>
       <div style="display:flex;gap:10px;align-items:center;">
         <a href="contact.html" class="btn btn-green" style="padding:9px 18px;font-size:13px;">Plan Trip</a>
-        <button class="burger" onclick="document.getElementById('mob').classList.toggle('open')"><span></span><span></span><span></span></button>
+        <button class="burger" aria-label="Open navigation menu" onclick="document.getElementById('mob').classList.toggle('open')"><span></span><span></span><span></span></button>
       </div>
     </div>
   </div>
 </header>
 
+<main id="main-content">
 <div class="mob-nav" id="mob">
   <a href="../index.html">Home</a><a href="destinations.html">Destinations</a>
   <a href="packages.html">Packages</a><a href="services.html">Services</a>
@@ -45,7 +46,7 @@
 <!-- BANNER WITH REAL PHOTO -->
 <section class="hero" style="height:55vh;min-height:360px;">
   <div class="hero-bg">
-    <img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Bali Destinations">
+    <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1400&q=80" alt="Bali Destinations"/>
   </div>
   <div class="hero-shade"></div>
   <div class="wrap">
@@ -79,7 +80,7 @@
 
       <div class="card">
         <div class="thumb">
-          <img src="https://images.unsplash.com/photo-1624935851312-845758a99160?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Tanah Lot Temple">
+          <img src="https://images.unsplash.com/photo-1562614278-1bc29e92cd06?w=600&q=80" alt="Tanah Lot Temple"/>
           <div class="reg">Temple</div>
           <div class="cap"><strong>Tanah Lot</strong><span>Sea Temple at Sunset</span></div>
         </div>
@@ -92,7 +93,7 @@
 
       <div class="card">
         <div class="thumb">
-          <img src="https://images.unsplash.com/photo-1604842937136-1648761a6256?q=80&w=1065&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Uluwatu Temple">
+          <img src="https://images.unsplash.com/photo-1539367628448-4bc5c9d171c8?w=600&q=80" alt="Uluwatu Temple"/>
           <div class="reg">Temple</div>
           <div class="cap"><strong>Uluwatu Temple</strong><span>Clifftop at 70m</span></div>
         </div>
@@ -105,7 +106,7 @@
 
       <div class="card">
         <div class="thumb">
-          <img src="https://images.unsplash.com/photo-1722460228785-733ae3a0e8c8?q=80&w=1035&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Kuta Seminyak Beach">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Kuta Seminyak Beach"/>
           <div class="reg">Beach</div>
           <div class="cap"><strong>Kuta &amp; Seminyak</strong><span>Surf &amp; Nightlife</span></div>
         </div>
@@ -129,7 +130,7 @@
 
       <div class="card">
         <div class="thumb">
-          <img src="https://images.unsplash.com/photo-1652451160926-6d0f2bb16cfe?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Ubud Bali">
+          <img src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=600&q=80" alt="Ubud Bali"/>
           <div class="reg">Culture</div>
           <div class="cap"><strong>Ubud Town</strong><span>Arts, Culture &amp; Yoga</span></div>
         </div>
@@ -142,7 +143,7 @@
 
       <div class="card">
         <div class="thumb">
-          <img src="https://images.unsplash.com/photo-1735991087874-febd3c05544e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Tegalalang Rice Terraces">
+          <img src="https://images.unsplash.com/photo-1604999333679-b86d54738315?w=600&q=80" alt="Tegalalang Rice Terraces"/>
           <div class="reg">UNESCO</div>
           <div class="cap"><strong>Tegalalang Terraces</strong><span>UNESCO Heritage</span></div>
         </div>
@@ -155,7 +156,7 @@
 
       <div class="card">
         <div class="thumb">
-          <img src="https://images.unsplash.com/photo-1595319100995-e350a1095086?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Bali Waterfall">
+          <img src="https://images.unsplash.com/photo-1531761535209-180857e963b9?w=600&q=80" alt="Bali Waterfall"/>
           <div class="reg">Nature</div>
           <div class="cap"><strong>Tegenungan Waterfall</strong><span>Jungle Falls near Ubud</span></div>
         </div>
@@ -179,7 +180,7 @@
 
       <div class="card">
         <div class="thumb">
-          <img src="https://images.unsplash.com/photo-1566987827585-6c556cc32848?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Kelingking Beach Nusa Penida">
+          <img src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=600&q=80" alt="Kelingking Beach Nusa Penida"/>
           <div class="reg">Nusa Penida</div>
           <div class="cap"><strong>Kelingking Beach</strong><span>T-Rex Cliff Viewpoint</span></div>
         </div>
@@ -192,7 +193,7 @@
 
       <div class="card">
         <div class="thumb">
-          <img src="https://images.unsplash.com/photo-1692810122326-11b00acfba62?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Scuba Diving Bali">
+          <img src="https://images.unsplash.com/photo-1504701954957-2010ec3bcec1?w=600&q=80" alt="Scuba Diving Bali"/>
           <div class="reg">Nusa Lembongan</div>
           <div class="cap"><strong>Manta Point</strong><span>Swim with Manta Rays</span></div>
         </div>
@@ -205,7 +206,7 @@
 
       <div class="card">
         <div class="thumb">
-          <img src="https://images.unsplash.com/photo-1712078953326-346a472bddb0?q=80&w=2944&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mount Batur Volcano">
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" alt="Mount Batur Volcano"/>
           <div class="reg">North Bali</div>
           <div class="cap"><strong>Mount Batur</strong><span>Active Volcano Sunrise</span></div>
         </div>
@@ -228,7 +229,7 @@
   <div class="wrap">
     <h2>Stay Inspired</h2>
     <p>Subscribe for Bali travel tips, festival dates and exclusive deals.</p>
-    <div class="nl-row"><input type="email" placeholder="Your email address…"><button class="btn btn-white">Subscribe</button></div>
+    <div class="nl-row"><input type="email" placeholder="Your email address…"/><button class="btn btn-white">Subscribe</button></div>
   </div>
 </section>
 
@@ -237,17 +238,18 @@
   <div class="wrap">
     <div class="fgrid">
       <div class="fbrand">
-        <div class="logo"><div class="logo-icon">🏖️</div><div><strong style="color:#fff;font-family:'Playfair Display',serif;font-size:16px;">Incredible Bali</strong><span style="font-size:10px;color:rgba(255,255,255,.4);">Island of the Gods</span></div></div>
+        <div class="logo"><div class="logo-icon" aria-hidden="true">🌺</div><div><strong style="color:#fff;font-family:'Playfair Display',serif;font-size:16px;">Incredible Bali</strong><span style="font-size:13px;color:rgba(255,255,255,.55);">Island of the Gods</span></div></div>
         <p>Official Bali Tourism portal by the Ministry of Tourism, Republic of Indonesia.</p>
       </div>
-      <div class="fcol"><h3>Explore</h3><a href="destinations.html">Destinations</a><a href="destinations.html">Beaches</a><a href="destinations.html">Temples</a></div>
-      <div class="fcol"><h3>Travel</h3><a href="packages.html">Packages</a><a href="services.html">Services</a></div>
-      <div class="fcol"><h3>Info</h3><a href="about.html">About Bali</a><a href="contact.html">Contact</a></div>
+      <div class="fcol"><h4>Explore</h4><a href="destinations.html">Destinations</a><a href="destinations.html">Beaches</a><a href="destinations.html">Temples</a></div>
+      <div class="fcol"><h4>Travel</h4><a href="packages.html">Packages</a><a href="services.html">Services</a></div>
+      <div class="fcol"><h4>Info</h4><a href="about.html">About Bali</a><a href="contact.html">Contact</a></div>
     </div>
     <div class="fbot"><span>© 2025 Incredible Bali · Ministry of Tourism, Republic of Indonesia</span></div>
   </div>
 </footer>
-<button id="top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+</main>
+<button id="top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
 <script>
   window.addEventListener('scroll', () => document.getElementById('top-btn').classList.toggle('show', window.scrollY > 380));
   document.querySelectorAll('.fb').forEach(b => b.addEventListener('click', () => {
