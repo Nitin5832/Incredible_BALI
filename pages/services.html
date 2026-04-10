@@ -9,122 +9,184 @@
 </head>
 <body>
 
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
 <div class="topbar">
-  <div class="wrap"><span>🌴 Official Bali Tourism Portal</span><div><a href="#">FAQs</a><a href="contact.html">Contact</a></div></div>
+  <div class="wrap">
+    <span>🌴 Official Bali Tourism Portal</span>
+    <nav aria-label="Utility links">
+      <a href="#">FAQs</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
 </div>
 
 <header>
   <div class="wrap">
     <div class="nav">
-      <a href="../index.html" class="logo">
-        <div class="logo-icon">🏖️</div>
+      <a href="../index.html" class="logo" aria-label="Incredible Bali – Go to homepage">
+        <div class="logo-icon" aria-hidden="true">🏖️</div>
         <div><strong>Incredible Bali</strong><span>Island of the Gods</span></div>
       </a>
-      <div class="nav-links">
-        <a href="../index.html">Home</a><a href="destinations.html">Destinations</a>
-        <a href="packages.html">Packages</a><a href="services.html" class="on">Services</a>
-        <a href="about.html">About Bali</a><a href="contact.html">Contact</a>
-      </div>
+      <nav aria-label="Main navigation">
+        <div class="nav-links">
+          <a href="../index.html">Home</a>
+          <a href="destinations.html">Destinations</a>
+          <a href="packages.html">Packages</a>
+          <a href="services.html" class="on">Services</a>
+          <a href="about.html">About Bali</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
       <div style="display:flex;gap:10px;align-items:center;">
         <a href="contact.html" class="btn btn-green" style="padding:9px 18px;font-size:13px;">Plan Trip</a>
-        <button class="burger" onclick="document.getElementById('mob').classList.toggle('open')"><span></span><span></span><span></span></button>
+        <button class="burger" aria-label="Open navigation menu" aria-expanded="false" onclick="toggleMenu(this)">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
   </div>
 </header>
-<div class="mob-nav" id="mob">
-  <a href="../index.html">Home</a><a href="destinations.html">Destinations</a>
-  <a href="packages.html">Packages</a><a href="services.html">Services</a>
-  <a href="about.html">About Bali</a><a href="contact.html">Contact</a>
-</div>
+
+<nav class="mob-nav" id="mob" aria-label="Mobile navigation">
+  <a href="../index.html">Home</a>
+  <a href="destinations.html">Destinations</a>
+  <a href="packages.html">Packages</a>
+  <a href="services.html">Services</a>
+  <a href="about.html">About Bali</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<main id="main-content">
 
 <div class="banner">
   <div class="wrap">
-    <div class="crumb"><a href="../index.html">Home</a> › <span>Services</span></div>
+    <nav class="crumb" aria-label="Breadcrumb">
+      <a href="../index.html">Home</a>
+      <span aria-hidden="true">›</span>
+      <span aria-current="page">Services</span>
+    </nav>
     <h1>Our Travel Services</h1>
     <p>From flight booking to local guides — we handle every detail of your Bali journey.</p>
   </div>
 </div>
 
 <!-- SERVICES GRID -->
-<section class="sec">
+<section class="sec" aria-labelledby="svc-heading">
   <div class="wrap">
     <div class="center" style="margin-bottom:36px;">
       <span class="label">What We Offer</span>
-      <h2>End-to-End Travel Services</h2>
+      <h2 id="svc-heading">End-to-End Travel Services</h2>
     </div>
     <div class="svcs">
-      <div class="svc"><div class="ico">✈️</div><h3>Flight Booking</h3><p>Best-value flights to Ngurah Rai Airport (DPS) from major UK and global hubs. Flexible dates available.</p></div>
-      <div class="svc"><div class="ico">🏨</div><h3>Hotel &amp; Villa Bookings</h3><p>From budget guesthouses to 5-star resorts and private pool villas — every property personally vetted by our team.</p></div>
-      <div class="svc"><div class="ico">🧭</div><h3>Guided Tours</h3><p>Local expert guides for temple tours, rice terrace treks, cooking classes and volcano hikes. Private or group options.</p></div>
-      <div class="svc"><div class="ico">📋</div><h3>Visa Assistance</h3><p>Most nationalities receive a free Visa on Arrival (VOA) for 30 days. We guide you through the e-VOA process.</p></div>
-      <div class="svc"><div class="ico">🛡️</div><h3>Travel Insurance</h3><p>Comprehensive cover for medical, trip cancellations, lost baggage and adventure activities including surfing and diving.</p></div>
-      <div class="svc"><div class="ico">🚗</div><h3>Airport Transfers</h3><p>Private drivers, taxis and motorbike hires arranged. We also recommend Grab or Gojek apps for quick journeys.</p></div>
-      <div class="svc"><div class="ico">💆</div><h3>Spa &amp; Wellness</h3><p>Pre-book Balinese massages, yoga classes and spa packages at Bali's finest wellness centres.</p></div>
-      <div class="svc"><div class="ico">🎒</div><h3>Group Travel</h3><p>For groups of 10+, our dedicated coordinator manages logistics, accommodation and group activities.</p></div>
-      <div class="svc"><div class="ico">🍽️</div><h3>Restaurant Bookings</h3><p>From local warungs to cliff-top restaurants — our concierge team books the best tables across Bali.</p></div>
+      <div class="svc"><div class="ico" aria-hidden="true">✈️</div><h3>Flight Booking</h3><p>Best-value flights to Ngurah Rai Airport (DPS) from major UK and global hubs. Flexible dates available.</p></div>
+      <div class="svc"><div class="ico" aria-hidden="true">🏨</div><h3>Hotel &amp; Villa Bookings</h3><p>From budget guesthouses to 5-star resorts and private pool villas — every property personally vetted by our team.</p></div>
+      <div class="svc"><div class="ico" aria-hidden="true">🧭</div><h3>Guided Tours</h3><p>Local expert guides for temple tours, rice terrace treks, cooking classes and volcano hikes. Private or group options.</p></div>
+      <div class="svc" id="visa"><div class="ico" aria-hidden="true">📋</div><h3>Visa Assistance</h3><p>Most nationalities receive a free Visa on Arrival (VOA) for 30 days. We guide you through the e-VOA process.</p></div>
+      <div class="svc"><div class="ico" aria-hidden="true">🛡️</div><h3>Travel Insurance</h3><p>Comprehensive cover for medical, trip cancellations, lost baggage and adventure activities including surfing and diving.</p></div>
+      <div class="svc"><div class="ico" aria-hidden="true">🚗</div><h3>Airport Transfers</h3><p>Private drivers, taxis and motorbike hires arranged. We also recommend Grab or Gojek apps for quick journeys.</p></div>
+      <div class="svc"><div class="ico" aria-hidden="true">💆</div><h3>Spa &amp; Wellness</h3><p>Pre-book Balinese massages, yoga classes and spa packages at Bali's finest wellness centres.</p></div>
+      <div class="svc"><div class="ico" aria-hidden="true">🎒</div><h3>Group Travel</h3><p>For groups of 10+, our dedicated coordinator manages logistics, accommodation and group activities.</p></div>
+      <div class="svc"><div class="ico" aria-hidden="true">🍽️</div><h3>Restaurant Bookings</h3><p>From local warungs to cliff-top restaurants — our concierge team books the best tables across Bali.</p></div>
     </div>
   </div>
 </section>
 
-<!-- HOW IT WORKS + PHOTO -->
-<section class="sec bg">
+<!-- HOW IT WORKS -->
+<section class="sec bg" aria-labelledby="how-heading">
   <div class="wrap">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;">
       <div>
         <span class="label">Simple Process</span>
-        <h2 style="margin-bottom:24px;">How It Works</h2>
-        <div style="display:flex;flex-direction:column;gap:0;padding-left:14px;border-left:3px solid var(--glight);">
-          <div style="position:relative;padding:0 0 26px 22px;">
-            <div style="position:absolute;left:-20px;top:0;width:30px;height:30px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;">1</div>
+        <h2 id="how-heading" style="margin-bottom:24px;">How It Works</h2>
+        <ol style="display:flex;flex-direction:column;gap:0;padding-left:14px;border-left:3px solid var(--glight);list-style:none;">
+          <li style="position:relative;padding:0 0 26px 22px;">
+            <div style="position:absolute;left:-20px;top:0;width:30px;height:30px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;" aria-hidden="true">1</div>
             <h3 style="font-size:15px;margin-bottom:4px;">Choose Your Destination &amp; Package</h3>
-            <p style="font-size:13px;color:var(--grey);line-height:1.6">Browse 120+ Bali destinations or tell us your dream trip and we'll build a custom itinerary.</p>
-          </div>
-          <div style="position:relative;padding:0 0 26px 22px;">
-            <div style="position:absolute;left:-20px;top:0;width:30px;height:30px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;">2</div>
+            <p style="font-size:14px;color:var(--grey);line-height:1.6;">Browse 120+ Bali destinations or tell us your dream trip and we'll build a custom itinerary.</p>
+          </li>
+          <li style="position:relative;padding:0 0 26px 22px;">
+            <div style="position:absolute;left:-20px;top:0;width:30px;height:30px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;" aria-hidden="true">2</div>
             <h3 style="font-size:15px;margin-bottom:4px;">Register &amp; Tell Us Your Preferences</h3>
-            <p style="font-size:13px;color:var(--grey);line-height:1.6">Create your account, set travel dates, group size and requirements — we personalise everything.</p>
-          </div>
-          <div style="position:relative;padding:0 0 26px 22px;">
-            <div style="position:absolute;left:-20px;top:0;width:30px;height:30px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;">3</div>
+            <p style="font-size:14px;color:var(--grey);line-height:1.6;">Create your account, set travel dates, group size and requirements — we personalise everything.</p>
+          </li>
+          <li style="position:relative;padding:0 0 26px 22px;">
+            <div style="position:absolute;left:-20px;top:0;width:30px;height:30px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;" aria-hidden="true">3</div>
             <h3 style="font-size:15px;margin-bottom:4px;">Review &amp; Pay Securely</h3>
-            <p style="font-size:13px;color:var(--grey);line-height:1.6">We send a full itinerary for approval. Pay online — 10% deposit to reserve, balance 60 days before travel.</p>
-          </div>
-          <div style="position:relative;padding:0 0 0 22px;">
-            <div style="position:absolute;left:-20px;top:0;width:30px;height:30px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;">4</div>
+            <p style="font-size:14px;color:var(--grey);line-height:1.6;">We send a full itinerary for approval. Pay online — 10% deposit to reserve, balance 60 days before travel.</p>
+          </li>
+          <li style="position:relative;padding:0 0 0 22px;">
+            <div style="position:absolute;left:-20px;top:0;width:30px;height:30px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;" aria-hidden="true">4</div>
             <h3 style="font-size:15px;margin-bottom:4px;">Travel &amp; Enjoy Bali</h3>
-            <p style="font-size:13px;color:var(--grey);line-height:1.6">E-tickets, hotel vouchers, guide contacts and 24/7 support number land in your inbox. Time to explore!</p>
-          </div>
-        </div>
+            <p style="font-size:14px;color:var(--grey);line-height:1.6;">E-tickets, hotel vouchers, guide contacts and 24/7 support number land in your inbox. Time to explore!</p>
+          </li>
+        </ol>
       </div>
       <div style="display:flex;flex-direction:column;gap:16px;">
         <div style="height:230px;border-radius:12px;overflow:hidden;">
-          <img src="https://images.unsplash.com/photo-1562614278-1bc29e92cd06?w=700&q=80" alt="Bali Temple">
+          <img src="https://images.unsplash.com/photo-1562614278-1bc29e92cd06?w=700&q=80" alt="Tanah Lot temple at dusk with waves crashing on rocks below">
         </div>
-        <div style="background:#fff;border:1px solid var(--border);border-radius:12px;padding:20px;">
-          <h4 style="font-size:14px;margin-bottom:12px;">📋 Practical Travel Info</h4>
-          <div style="font-size:13px;display:flex;flex-direction:column;gap:0;">
-            <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);"><span style="color:var(--grey)">Currency</span><strong>Indonesian Rupiah (IDR)</strong></div>
-            <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);"><span style="color:var(--grey)">Visa (UK/EU)</span><strong>Free on Arrival</strong></div>
-            <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);"><span style="color:var(--grey)">Tourism Tax</span><strong>IDR 150,000 (~£8)</strong></div>
-            <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);"><span style="color:var(--grey)">Best Season</span><strong>April – October</strong></div>
-            <div style="display:flex;justify-content:space-between;padding:8px 0;"><span style="color:var(--grey)">Flight (from UK)</span><strong>~16–18 hours</strong></div>
-          </div>
+        <div style="background:#fff;border:2px solid var(--border);border-radius:12px;padding:20px;">
+          <h3 style="font-size:15px;margin-bottom:12px;">Practical Travel Info</h3>
+          <dl style="font-size:14px;display:flex;flex-direction:column;gap:0;">
+            <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);"><dt style="color:var(--grey);">Currency</dt><dd><strong>Indonesian Rupiah (IDR)</strong></dd></div>
+            <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);"><dt style="color:var(--grey);">Visa (UK/EU)</dt><dd><strong>Free on Arrival</strong></dd></div>
+            <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);"><dt style="color:var(--grey);">Tourism Tax</dt><dd><strong>IDR 150,000 (~£8)</strong></dd></div>
+            <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);"><dt style="color:var(--grey);">Best Season</dt><dd><strong>April – October</strong></dd></div>
+            <div style="display:flex;justify-content:space-between;padding:8px 0;"><dt style="color:var(--grey);">Flight (from UK)</dt><dd><strong>~16–18 hours</strong></dd></div>
+          </dl>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="nl"><div class="wrap"><h2>Stay Inspired</h2><p>Subscribe for Bali travel tips and exclusive deals.</p><div class="nl-row"><input type="email" placeholder="Your email…"><button class="btn btn-white">Subscribe</button></div></div></section>
+<!-- NEWSLETTER -->
+<section class="nl" aria-labelledby="nl-heading">
+  <div class="wrap">
+    <h2 id="nl-heading">Stay Inspired</h2>
+    <p>Subscribe for Bali travel tips and exclusive deals.</p>
+    <div class="nl-row">
+      <label for="nl-email" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Email address</label>
+      <input type="email" id="nl-email" name="newsletter-email" placeholder="Your email…" aria-label="Email address for newsletter">
+      <button class="btn btn-white" type="button">Subscribe</button>
+    </div>
+  </div>
+</section>
 
-<footer><div class="wrap"><div class="fgrid">
-  <div class="fbrand"><div class="logo"><div class="logo-icon">🏖️</div><div><strong style="color:#fff;font-family:'Playfair Display',serif;font-size:16px;">Incredible Bali</strong><span style="font-size:10px;color:rgba(255,255,255,.4);">Island of the Gods</span></div></div><p>Official Bali Tourism portal by the Ministry of Tourism, Republic of Indonesia.</p></div>
-  <div class="fcol"><h3>Explore</h3><a href="destinations.html">Destinations</a><a href="destinations.html">Beaches</a></div>
-  <div class="fcol"><h3>Travel</h3><a href="packages.html">Packages</a><a href="services.html">Services</a></div>
-  <div class="fcol"><h3>Info</h3><a href="about.html">About Bali</a><a href="contact.html">Contact</a></div>
-</div><div class="fbot"><span>© 2025 Incredible Bali · Ministry of Tourism, Republic of Indonesia</span></div></div></footer>
-<button id="top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
-<script>window.addEventListener('scroll', () => document.getElementById('top-btn').classList.toggle('show', window.scrollY > 380));</script>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="fbrand">
+        <div class="logo">
+          <div class="logo-icon" aria-hidden="true">🏖️</div>
+          <div>
+            <strong style="color:#fff;font-family:'Playfair Display',serif;font-size:17px;">Incredible Bali</strong>
+            <span style="font-size:13px;color:#a8a8a8;display:block;">Island of the Gods</span>
+          </div>
+        </div>
+        <p>Official Bali Tourism portal by the Ministry of Tourism, Republic of Indonesia.</p>
+      </div>
+      <div class="fcol"><h4>Explore</h4><a href="destinations.html">Destinations</a><a href="destinations.html#south">South Bali</a></div>
+      <div class="fcol"><h4>Travel</h4><a href="packages.html">Packages</a><a href="services.html">Services</a></div>
+      <div class="fcol"><h4>Info</h4><a href="about.html">About Bali</a><a href="contact.html">Contact</a></div>
+    </div>
+    <div class="fbot"><span>© 2025 Incredible Bali · Ministry of Tourism, Republic of Indonesia</span></div>
+  </div>
+</footer>
+
+<button id="top-btn" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+  window.addEventListener('scroll', () => document.getElementById('top-btn').classList.toggle('show', window.scrollY > 380));
+  function toggleMenu(btn) {
+    var mob = document.getElementById('mob');
+    mob.classList.toggle('open');
+    btn.setAttribute('aria-expanded', mob.classList.contains('open'));
+  }
+</script>
 </body>
 </html>
