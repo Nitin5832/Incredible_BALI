@@ -9,160 +9,301 @@
 </head>
 <body>
 
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
 <div class="topbar">
-  <div class="wrap"><span>🌴 Official Bali Tourism Portal</span><div><a href="#">FAQs</a><a href="contact.html">Contact</a></div></div>
+  <div class="wrap">
+    <span>🌴 Official Bali Tourism Portal</span>
+    <nav aria-label="Utility links">
+      <a href="#">FAQs</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
 </div>
 
 <header>
   <div class="wrap">
     <div class="nav">
-      <a href="../index.html" class="logo">
-        <div class="logo-icon">🏖️</div>
+      <a href="../index.html" class="logo" aria-label="Incredible Bali – Go to homepage">
+        <div class="logo-icon" aria-hidden="true">🏖️</div>
         <div><strong>Incredible Bali</strong><span>Island of the Gods</span></div>
       </a>
-      <div class="nav-links">
-        <a href="../index.html">Home</a><a href="destinations.html">Destinations</a>
-        <a href="packages.html">Packages</a><a href="services.html">Services</a>
-        <a href="about.html">About Bali</a><a href="contact.html" class="on">Contact</a>
-      </div>
+      <nav aria-label="Main navigation">
+        <div class="nav-links">
+          <a href="../index.html">Home</a>
+          <a href="destinations.html">Destinations</a>
+          <a href="packages.html">Packages</a>
+          <a href="services.html">Services</a>
+          <a href="about.html">About Bali</a>
+          <a href="contact.html" class="on">Contact</a>
+        </div>
+      </nav>
       <div style="display:flex;gap:10px;align-items:center;">
         <a href="contact.html" class="btn btn-green" style="padding:9px 18px;font-size:13px;">Plan Trip</a>
-        <button class="burger" onclick="document.getElementById('mob').classList.toggle('open')"><span></span><span></span><span></span></button>
+        <button class="burger" aria-label="Open navigation menu" aria-expanded="false" onclick="toggleMenu(this)">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
   </div>
 </header>
-<div class="mob-nav" id="mob">
-  <a href="../index.html">Home</a><a href="destinations.html">Destinations</a>
-  <a href="packages.html">Packages</a><a href="services.html">Services</a>
-  <a href="about.html">About Bali</a><a href="contact.html">Contact</a>
-</div>
+
+<nav class="mob-nav" id="mob" aria-label="Mobile navigation">
+  <a href="../index.html">Home</a>
+  <a href="destinations.html">Destinations</a>
+  <a href="packages.html">Packages</a>
+  <a href="services.html">Services</a>
+  <a href="about.html">About Bali</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<main id="main-content">
 
 <div class="banner">
   <div class="wrap">
-    <div class="crumb"><a href="../index.html">Home</a> › <span>Contact &amp; Register</span></div>
+    <nav class="crumb" aria-label="Breadcrumb">
+      <a href="../index.html">Home</a>
+      <span aria-hidden="true">›</span>
+      <span aria-current="page">Contact &amp; Register</span>
+    </nav>
     <h1>Contact Us &amp; Register</h1>
     <p>Create your account, send us a message or request a custom Bali itinerary — we respond within 24 hours.</p>
   </div>
 </div>
 
-<!-- REGISTER + FEEDBACK FORMS SIDE BY SIDE -->
-<section class="sec">
+<!-- FORMS SECTION -->
+<section class="sec" aria-labelledby="forms-heading">
   <div class="wrap">
+    <h2 id="forms-heading" class="center" style="margin-bottom:36px;">Get In Touch</h2>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start;">
 
-      <!-- REGISTER FORM -->
+      <!-- REGISTER FORM: every label has matching for/id -->
       <div class="form-box">
-        <h2>Create Your Account</h2>
+        <h2 style="font-size:20px;">Create Your Account</h2>
         <p class="sub">Join Incredible Bali to save favourites, track bookings and get personalised recommendations.</p>
-        <div class="frow2">
-          <div class="fg"><label>First Name *</label><input type="text" placeholder="e.g. Priya"></div>
-          <div class="fg"><label>Last Name *</label><input type="text" placeholder="e.g. Sharma"></div>
-        </div>
-        <div class="fg"><label>Email Address *</label><input type="email" placeholder="priya@email.com"></div>
-        <div class="frow2">
-          <div class="fg"><label>Password *</label><input type="password" placeholder="Min. 8 characters"></div>
-          <div class="fg"><label>Confirm Password *</label><input type="password" placeholder="Re-enter password"></div>
-        </div>
-        <div class="fg"><label>Phone Number</label><input type="tel" placeholder="+44 7700 900000"></div>
+
         <div class="frow2">
           <div class="fg">
-            <label>Nationality</label>
-            <select><option>Select country…</option><option>British</option><option>Indian</option><option>American</option><option>Australian</option><option>Other</option></select>
+            <label for="reg-fname">First Name <span aria-hidden="true">*</span><span class="skip-link" style="position:static;font-size:12px;">(required)</span></label>
+            <input type="text" id="reg-fname" name="first-name" placeholder="e.g. Priya" required autocomplete="given-name">
           </div>
-          <div class="fg"><label>Date of Birth</label><input type="date"></div>
+          <div class="fg">
+            <label for="reg-lname">Last Name <span aria-hidden="true">*</span></label>
+            <input type="text" id="reg-lname" name="last-name" placeholder="e.g. Sharma" required autocomplete="family-name">
+          </div>
         </div>
+
         <div class="fg">
-          <label>Travel Interests</label>
-          <select><option>Select preference…</option><option>Beaches &amp; Water Sports</option><option>Temples &amp; Culture</option><option>Adventure &amp; Trekking</option><option>Wellness &amp; Yoga</option><option>Family Travel</option><option>Honeymoon / Romance</option></select>
+          <label for="reg-email">Email Address <span aria-hidden="true">*</span></label>
+          <input type="email" id="reg-email" name="email" placeholder="priya@email.com" required autocomplete="email">
         </div>
+
+        <div class="frow2">
+          <div class="fg">
+            <label for="reg-pwd">Password <span aria-hidden="true">*</span></label>
+            <input type="password" id="reg-pwd" name="password" placeholder="Min. 8 characters" required autocomplete="new-password">
+          </div>
+          <div class="fg">
+            <label for="reg-pwd2">Confirm Password <span aria-hidden="true">*</span></label>
+            <input type="password" id="reg-pwd2" name="confirm-password" placeholder="Re-enter password" required autocomplete="new-password">
+          </div>
+        </div>
+
         <div class="fg">
-          <label style="display:flex;align-items:center;gap:8px;font-weight:400;cursor:pointer;">
-            <input type="checkbox" style="width:15px;height:15px;flex-shrink:0;">
-            I agree to the <a href="#" style="color:var(--green)">Terms of Use</a> and <a href="#" style="color:var(--green)">Privacy Policy</a>
+          <label for="reg-phone">Phone Number</label>
+          <input type="tel" id="reg-phone" name="phone" placeholder="+44 7700 900000" autocomplete="tel">
+        </div>
+
+        <div class="frow2">
+          <div class="fg">
+            <label for="reg-nat">Nationality</label>
+            <select id="reg-nat" name="nationality" autocomplete="country-name">
+              <option value="">Select country…</option>
+              <option>British</option>
+              <option>Indian</option>
+              <option>American</option>
+              <option>Australian</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="fg">
+            <label for="reg-dob">Date of Birth</label>
+            <input type="date" id="reg-dob" name="dob" autocomplete="bday">
+          </div>
+        </div>
+
+        <div class="fg">
+          <label for="reg-interest">Travel Interests</label>
+          <select id="reg-interest" name="travel-interests">
+            <option value="">Select preference…</option>
+            <option>Beaches &amp; Water Sports</option>
+            <option>Temples &amp; Culture</option>
+            <option>Adventure &amp; Trekking</option>
+            <option>Wellness &amp; Yoga</option>
+            <option>Family Travel</option>
+            <option>Honeymoon / Romance</option>
+          </select>
+        </div>
+
+        <div class="fg">
+          <label style="display:flex;align-items:flex-start;gap:10px;font-weight:400;cursor:pointer;font-size:14px;">
+            <input type="checkbox" id="reg-terms" name="terms" style="width:16px;height:16px;flex-shrink:0;margin-top:2px;" required>
+            <span>I agree to the <a href="#" style="color:var(--green);text-decoration:underline;">Terms of Use</a> and <a href="#" style="color:var(--green);text-decoration:underline;">Privacy Policy</a></span>
           </label>
         </div>
-        <button class="fsub" onclick="document.getElementById('reg-ok').style.display='block'">Create My Account</button>
-        <div class="ok" id="reg-ok">✅ Account created! Welcome to Incredible Bali.</div>
-        <p style="text-align:center;font-size:13px;color:var(--grey);margin-top:14px;">Already registered? <a href="#" style="color:var(--green)">Sign in</a></p>
+
+        <button class="fsub" type="button" onclick="showOk('reg-ok')">Create My Account</button>
+        <div class="ok" id="reg-ok" role="alert">Account created! Welcome to Incredible Bali.</div>
+        <p style="text-align:center;font-size:14px;color:var(--grey);margin-top:14px;">Already registered? <a href="#" style="color:var(--green);text-decoration:underline;">Sign in</a></p>
       </div>
 
-      <!-- RIGHT COLUMN: FEEDBACK + INFO -->
+      <!-- RIGHT COLUMN -->
       <div style="display:flex;flex-direction:column;gap:22px;">
 
         <!-- FEEDBACK FORM -->
         <div class="form-box">
-          <h2>Send a Message / Feedback</h2>
+          <h2 style="font-size:20px;">Send a Message / Feedback</h2>
           <p class="sub">General enquiry, booking help or feedback — we reply within 24 hours.</p>
+
           <div class="frow2">
-            <div class="fg"><label>Full Name *</label><input type="text" placeholder="Your name"></div>
-            <div class="fg"><label>Email *</label><input type="email" placeholder="your@email.com"></div>
-          </div>
-          <div class="fg">
-            <label>Subject</label>
-            <select><option>General Enquiry</option><option>Booking Assistance</option><option>Package Information</option><option>Visa &amp; Entry</option><option>Feedback &amp; Suggestions</option><option>Complaint</option></select>
-          </div>
-          <div class="fg"><label>Message *</label><textarea placeholder="Tell us how we can help…"></textarea></div>
-          <div class="fg">
-            <label>Rate Your Experience</label>
-            <div style="display:flex;gap:6px;flex-wrap:wrap;">
-              <button class="fb" onclick="rate(this)">★ 1</button>
-              <button class="fb" onclick="rate(this)">★★ 2</button>
-              <button class="fb" onclick="rate(this)">★★★ 3</button>
-              <button class="fb" onclick="rate(this)">★★★★ 4</button>
-              <button class="fb on" onclick="rate(this)">★★★★★ 5</button>
+            <div class="fg">
+              <label for="fb-name">Full Name <span aria-hidden="true">*</span></label>
+              <input type="text" id="fb-name" name="full-name" placeholder="Your name" required autocomplete="name">
+            </div>
+            <div class="fg">
+              <label for="fb-email">Email <span aria-hidden="true">*</span></label>
+              <input type="email" id="fb-email" name="email" placeholder="your@email.com" required autocomplete="email">
             </div>
           </div>
-          <button class="fsub" onclick="document.getElementById('msg-ok').style.display='block'">Send Message</button>
-          <div class="ok" id="msg-ok">✅ Message sent! We'll reply within 24 hours.</div>
+
+          <div class="fg">
+            <label for="fb-subject">Subject</label>
+            <select id="fb-subject" name="subject">
+              <option>General Enquiry</option>
+              <option>Booking Assistance</option>
+              <option>Package Information</option>
+              <option>Visa &amp; Entry</option>
+              <option>Feedback &amp; Suggestions</option>
+              <option>Complaint</option>
+            </select>
+          </div>
+
+          <div class="fg">
+            <label for="fb-msg">Message <span aria-hidden="true">*</span></label>
+            <textarea id="fb-msg" name="message" placeholder="Tell us how we can help…" required></textarea>
+          </div>
+
+          <fieldset style="border:none;padding:0;margin:0 0 18px;">
+            <legend style="font-size:14px;font-weight:600;color:#1a1a1a;margin-bottom:8px;display:block;">Rate Your Experience</legend>
+            <div style="display:flex;gap:6px;flex-wrap:wrap;">
+              <button class="fb" type="button" onclick="rate(this)" aria-label="Rate 1 star">★ 1</button>
+              <button class="fb" type="button" onclick="rate(this)" aria-label="Rate 2 stars">★★ 2</button>
+              <button class="fb" type="button" onclick="rate(this)" aria-label="Rate 3 stars">★★★ 3</button>
+              <button class="fb" type="button" onclick="rate(this)" aria-label="Rate 4 stars">★★★★ 4</button>
+              <button class="fb on" type="button" onclick="rate(this)" aria-label="Rate 5 stars">★★★★★ 5</button>
+            </div>
+          </fieldset>
+
+          <button class="fsub" type="button" onclick="showOk('msg-ok')">Send Message</button>
+          <div class="ok" id="msg-ok" role="alert">Message sent! We'll reply within 24 hours.</div>
         </div>
 
-        <!-- CONTACT INFO BOX -->
-        <div style="background:var(--cream);border:1px solid var(--border);border-radius:12px;padding:22px;">
-          <h3 style="font-size:14px;margin-bottom:12px;">📞 Contact Details</h3>
-          <p style="font-size:13px;color:var(--grey);margin-bottom:8px;">📧 hello@incrediblebali.gov.id</p>
-          <p style="font-size:13px;color:var(--grey);margin-bottom:8px;">📞 +44 20 7946 0958</p>
-          <p style="font-size:13px;color:var(--grey);margin-bottom:8px;">📍 Tourism Centre, Denpasar, Bali 80235</p>
-          <p style="font-size:13px;color:var(--grey);">🕐 Mon–Fri 8am–6pm · Sat 9am–3pm</p>
+        <!-- CONTACT INFO -->
+        <div style="background:var(--cream);border:2px solid var(--border);border-radius:12px;padding:22px;">
+          <h3 style="font-size:15px;margin-bottom:12px;">Contact Details</h3>
+          <p style="font-size:14px;color:var(--grey);margin-bottom:8px;"><span aria-hidden="true">📧</span> Email: hello@incrediblebali.gov.id</p>
+          <p style="font-size:14px;color:var(--grey);margin-bottom:8px;"><span aria-hidden="true">📞</span> Phone: +44 20 7946 0958</p>
+          <p style="font-size:14px;color:var(--grey);margin-bottom:8px;"><span aria-hidden="true">📍</span> Address: Tourism Centre, Denpasar, Bali 80235</p>
+          <p style="font-size:14px;color:var(--grey);">Hours: Mon–Fri 8am–6pm · Sat 9am–3pm</p>
         </div>
 
       </div>
     </div>
 
     <!-- PLAN MY TRIP FORM -->
-    <div style="margin-top:48px;">
+    <div style="margin-top:56px;">
       <div class="center" style="margin-bottom:28px;">
         <span class="label">Custom Itinerary</span>
         <h2>Plan My Bali Trip</h2>
-        <p class="sub" style="margin:8px auto 0">Tell us your dream — our specialists build your custom itinerary free of charge.</p>
+        <p class="sub" style="margin:8px auto 0;">Tell us your dream — our specialists build your custom itinerary free of charge.</p>
       </div>
       <div style="max-width:660px;margin:0 auto;">
         <div class="form-box">
-          <div class="frow2">
-            <div class="fg"><label>Full Name *</label><input type="text" placeholder="Your name"></div>
-            <div class="fg"><label>Email *</label><input type="email" placeholder="your@email.com"></div>
-          </div>
-          <div class="frow2">
-            <div class="fg"><label>Departure Date</label><input type="date"></div>
-            <div class="fg"><label>Return Date</label><input type="date"></div>
-          </div>
-          <div class="frow2">
-            <div class="fg"><label>Adults</label><select><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5+</option></select></div>
-            <div class="fg"><label>Children</label><select><option selected>0</option><option>1</option><option>2</option><option>3+</option></select></div>
-          </div>
+
           <div class="frow2">
             <div class="fg">
-              <label>Trip Type</label>
-              <select><option>Honeymoon / Romance</option><option>Family Holiday</option><option>Adventure</option><option>Wellness Retreat</option><option>Solo Travel</option></select>
+              <label for="pt-name">Full Name <span aria-hidden="true">*</span></label>
+              <input type="text" id="pt-name" name="full-name" placeholder="Your name" required autocomplete="name">
             </div>
             <div class="fg">
-              <label>Budget (per person)</label>
-              <select><option>Under £500</option><option>£500–£1,000</option><option selected>£1,000–£2,000</option><option>£2,000–£3,500</option><option>£3,500+</option></select>
+              <label for="pt-email">Email <span aria-hidden="true">*</span></label>
+              <input type="email" id="pt-email" name="email" placeholder="your@email.com" required autocomplete="email">
             </div>
           </div>
-          <div class="fg"><label>Special Requests</label><textarea placeholder="e.g. We'd love a sunset dinner, surf lessons and a temple tour…"></textarea></div>
-          <button class="fsub" onclick="document.getElementById('plan-ok').style.display='block'">Submit Trip Request →</button>
-          <div class="ok" id="plan-ok">✅ Request received! We'll send your custom Bali itinerary within 48 hours.</div>
+
+          <div class="frow2">
+            <div class="fg">
+              <label for="pt-dep">Departure Date</label>
+              <input type="date" id="pt-dep" name="departure-date">
+            </div>
+            <div class="fg">
+              <label for="pt-ret">Return Date</label>
+              <input type="date" id="pt-ret" name="return-date">
+            </div>
+          </div>
+
+          <div class="frow2">
+            <div class="fg">
+              <label for="pt-adults">Adults</label>
+              <select id="pt-adults" name="adults">
+                <option>1</option>
+                <option selected>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5+</option>
+              </select>
+            </div>
+            <div class="fg">
+              <label for="pt-children">Children</label>
+              <select id="pt-children" name="children">
+                <option selected>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3+</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="frow2">
+            <div class="fg">
+              <label for="pt-type">Trip Type</label>
+              <select id="pt-type" name="trip-type">
+                <option>Honeymoon / Romance</option>
+                <option>Family Holiday</option>
+                <option>Adventure</option>
+                <option>Wellness Retreat</option>
+                <option>Solo Travel</option>
+              </select>
+            </div>
+            <div class="fg">
+              <label for="pt-budget">Budget (per person)</label>
+              <select id="pt-budget" name="budget">
+                <option>Under £500</option>
+                <option>£500–£1,000</option>
+                <option selected>£1,000–£2,000</option>
+                <option>£2,000–£3,500</option>
+                <option>£3,500+</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="fg">
+            <label for="pt-notes">Special Requests</label>
+            <textarea id="pt-notes" name="special-requests" placeholder="e.g. We'd love a sunset dinner, surf lessons and a temple tour…"></textarea>
+          </div>
+
+          <button class="fsub" type="button" onclick="showOk('plan-ok')">Submit Trip Request →</button>
+          <div class="ok" id="plan-ok" role="alert">Request received! We'll send your custom Bali itinerary within 48 hours.</div>
         </div>
       </div>
     </div>
@@ -170,61 +311,61 @@
   </div>
 </section>
 
-<section class="nl"><div class="wrap"><h2>Stay Inspired</h2><p>Subscribe for Bali travel tips and exclusive deals.</p><div class="nl-row"><input type="email" placeholder="Your email…"><button class="btn btn-white">Subscribe</button></div></div></section>
+<!-- NEWSLETTER -->
+<section class="nl" aria-labelledby="nl-heading">
+  <div class="wrap">
+    <h2 id="nl-heading">Stay Inspired</h2>
+    <p>Subscribe for Bali travel tips and exclusive deals.</p>
+    <div class="nl-row">
+      <label for="nl-email" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Email address</label>
+      <input type="email" id="nl-email" name="newsletter-email" placeholder="Your email…" aria-label="Email address for newsletter">
+      <button class="btn btn-white" type="button">Subscribe</button>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
 <footer>
   <div class="wrap">
     <div class="fgrid">
       <div class="fbrand">
         <div class="logo">
-          <div class="logo-icon">🏖️</div>
+          <div class="logo-icon" aria-hidden="true">🏖️</div>
           <div>
-            <strong style="color:#fff;font-family:'Playfair Display',serif;font-size:16px;">
-              Incredible Bali
-            </strong>
-            <span style="font-size:10px;color:rgba(255,255,255,.4);">
-              Island of the Gods
-            </span>
+            <strong style="color:#fff;font-family:'Playfair Display',serif;font-size:17px;">Incredible Bali</strong>
+            <span style="font-size:13px;color:#a8a8a8;display:block;">Island of the Gods</span>
           </div>
         </div>
-        <p>
-          Official Bali Tourism portal by the Ministry of Tourism, Republic of Indonesia.
-        </p>
+        <p>Official Bali Tourism portal by the Ministry of Tourism, Republic of Indonesia.</p>
       </div>
-
-      <div class="fcol">
-        <h3>Explore</h3>
-        <a href="destinations.html">Destinations</a>
-        <a href="destinations.html">Beaches</a>
-      </div>
-
-      <div class="fcol">
-        <h3>Travel</h3>
-        <a href="packages.html">Packages</a>
-        <a href="services.html">Services</a>
-      </div>
-
-      <div class="fcol">
-        <h3>Info</h3>
-        <a href="about.html">About Bali</a>
-        <a href="contact.html">Contact</a>
-      </div>
+      <div class="fcol"><h4>Explore</h4><a href="destinations.html">Destinations</a><a href="destinations.html#south">South Bali</a></div>
+      <div class="fcol"><h4>Travel</h4><a href="packages.html">Packages</a><a href="services.html">Services</a></div>
+      <div class="fcol"><h4>Info</h4><a href="about.html">About Bali</a><a href="contact.html">Contact</a></div>
     </div>
-
-    <div class="fbot">
-      <span>© 2025 Incredible Bali · Ministry of Tourism, Republic of Indonesia</span>
-    </div>
+    <div class="fbot"><span>© 2025 Incredible Bali · Ministry of Tourism, Republic of Indonesia</span></div>
   </div>
 </footer>
 
-<button id="top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<button id="top-btn" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
 <script>
-  window.addEventListener('scroll', () => 
-    document.getElementById('top-btn').classList.toggle('show', window.scrollY > 380)
-  );
+  window.addEventListener('scroll', () => document.getElementById('top-btn').classList.toggle('show', window.scrollY > 380));
+
+  function toggleMenu(btn) {
+    var mob = document.getElementById('mob');
+    mob.classList.toggle('open');
+    btn.setAttribute('aria-expanded', mob.classList.contains('open'));
+  }
+
+  function showOk(id) {
+    var el = document.getElementById(id);
+    el.style.display = 'block';
+  }
 
   function rate(el) {
-    el.closest('div').querySelectorAll('.fb').forEach(b => b.classList.remove('on'));
+    el.closest('div').querySelectorAll('.fb').forEach(function(b) { b.classList.remove('on'); });
     el.classList.add('on');
   }
 </script>
