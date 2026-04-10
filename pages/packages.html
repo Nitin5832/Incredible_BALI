@@ -9,91 +9,115 @@
 </head>
 <body>
 
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
 <div class="topbar">
-  <div class="wrap"><span>🌴 Official Bali Tourism Portal</span><div><a href="#">FAQs</a><a href="contact.html">Contact</a></div></div>
+  <div class="wrap">
+    <span>🌴 Official Bali Tourism Portal</span>
+    <nav aria-label="Utility links">
+      <a href="#">FAQs</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
 </div>
 
 <header>
   <div class="wrap">
     <div class="nav">
-      <a href="../index.html" class="logo">
-        <div class="logo-icon">🏖️</div>
+      <a href="../index.html" class="logo" aria-label="Incredible Bali – Go to homepage">
+        <div class="logo-icon" aria-hidden="true">🏖️</div>
         <div><strong>Incredible Bali</strong><span>Island of the Gods</span></div>
       </a>
-      <div class="nav-links">
-        <a href="../index.html">Home</a><a href="destinations.html">Destinations</a>
-        <a href="packages.html" class="on">Packages</a><a href="services.html">Services</a>
-        <a href="about.html">About Bali</a><a href="contact.html">Contact</a>
-      </div>
+      <nav aria-label="Main navigation">
+        <div class="nav-links">
+          <a href="../index.html">Home</a>
+          <a href="destinations.html">Destinations</a>
+          <a href="packages.html" class="on">Packages</a>
+          <a href="services.html">Services</a>
+          <a href="about.html">About Bali</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
       <div style="display:flex;gap:10px;align-items:center;">
         <a href="contact.html" class="btn btn-green" style="padding:9px 18px;font-size:13px;">Plan Trip</a>
-        <button class="burger" onclick="document.getElementById('mob').classList.toggle('open')"><span></span><span></span><span></span></button>
+        <button class="burger" aria-label="Open navigation menu" aria-expanded="false" onclick="toggleMenu(this)">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
   </div>
 </header>
-<div class="mob-nav" id="mob">
-  <a href="../index.html">Home</a><a href="destinations.html">Destinations</a>
-  <a href="packages.html">Packages</a><a href="services.html">Services</a>
-  <a href="about.html">About Bali</a><a href="contact.html">Contact</a>
-</div>
 
-<!-- BANNER WITH REAL PHOTO -->
-<section class="hero" style="height:52vh;min-height:340px;">
+<nav class="mob-nav" id="mob" aria-label="Mobile navigation">
+  <a href="../index.html">Home</a>
+  <a href="destinations.html">Destinations</a>
+  <a href="packages.html">Packages</a>
+  <a href="services.html">Services</a>
+  <a href="about.html">About Bali</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<main id="main-content">
+
+<!-- HERO BANNER -->
+<section class="hero" style="height:52vh;min-height:340px;" aria-label="Packages banner">
   <div class="hero-bg">
-    <img src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=1400&q=80" alt="Bali Packages">
+    <img src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=1400&q=80" alt="Bali rice terraces with lush green paddies stretching to the horizon">
   </div>
   <div class="hero-shade"></div>
   <div class="wrap">
     <div class="hero-text">
-      <div class="crumb" style="margin-bottom:12px;"><a href="../index.html">Home</a> › <span>Packages</span></div>
-      <h1 style="font-size:clamp(26px,4vw,42px);">Bali Travel Packages</h1>
+      <nav class="crumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span aria-hidden="true">›</span>
+        <span aria-current="page">Packages</span>
+      </nav>
+      <h1>Bali Travel Packages</h1>
       <p>Handcrafted itineraries for couples, families and solo travellers.</p>
     </div>
   </div>
 </section>
 
-<div class="filters">
+<div class="filters" role="navigation" aria-label="Filter packages">
   <div class="wrap">
     <div class="frow">
-      <button class="fb on">All</button>
-      <button class="fb">💑 Couples</button>
-      <button class="fb">👨‍👩‍👧‍👦 Family</button>
-      <button class="fb">🏔 Adventure</button>
-      <button class="fb">🧘 Wellness</button>
+      <button class="fb on" type="button">All</button>
+      <button class="fb" type="button">Couples</button>
+      <button class="fb" type="button">Family</button>
+      <button class="fb" type="button">Adventure</button>
+      <button class="fb" type="button">Wellness</button>
     </div>
   </div>
 </div>
 
 <!-- COUPLES PACKAGES -->
-<section class="sec">
+<section class="sec" aria-labelledby="couples-heading">
   <div class="wrap">
     <span class="label">For Couples</span>
-    <h2 style="margin-bottom:8px;">Romance &amp; Honeymoon Packages</h2>
+    <h2 id="couples-heading" style="margin-bottom:8px;">Romance &amp; Honeymoon Packages</h2>
     <p class="sub">Fall in love with Bali — and each other.</p>
 
-    <!-- Featured couple package with real photo -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;margin-bottom:32px;background:#fff;border-radius:12px;border:1px solid var(--border);overflow:hidden;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;margin-bottom:32px;background:#fff;border-radius:12px;border:2px solid var(--border);overflow:hidden;">
       <div style="height:320px;">
-        <img src="https://images.unsplash.com/photo-1700751474902-067ef1de7cab?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Bali Honeymoon">
+        <img src="https://images.unsplash.com/photo-1700751474902-067ef1de7cab?q=80&w=2070&auto=format&fit=crop" alt="Romantic private villa with pool surrounded by tropical gardens in Bali">
       </div>
       <div style="padding:28px;">
-        <span class="badge bg-gold" style="margin-bottom:12px;display:inline-block;">💍 Best for Honeymoons</span>
+        <span class="badge bg-gold" style="margin-bottom:12px;display:inline-block;">Best for Honeymoons</span>
         <h3 style="font-family:'Playfair Display',serif;font-size:24px;margin-bottom:8px;">Honeymoon in Paradise</h3>
-        <p style="font-size:13px;color:var(--grey);margin-bottom:14px;line-height:1.65">7 nights private pool villa, daily breakfast, 3 candlelit dinners, full spa retreat and a personal guide for temple and rice terrace tours.</p>
-        <div style="font-size:30px;font-weight:700;color:var(--green);margin-bottom:4px;">£2,499 <span style="font-size:13px;font-weight:400;color:var(--grey);">per couple</span></div>
-        <div style="font-size:12px;color:var(--grey);margin-bottom:18px;">📅 7 Nights · 8 Days</div>
+        <p style="font-size:14px;color:var(--grey);margin-bottom:14px;line-height:1.65;">7 nights private pool villa, daily breakfast, 3 candlelit dinners, full spa retreat and a personal guide for temple and rice terrace tours.</p>
+        <div style="font-size:30px;font-weight:700;color:var(--green);margin-bottom:4px;">£2,499 <span style="font-size:14px;font-weight:400;color:var(--grey);">per couple</span></div>
+        <div style="font-size:14px;color:var(--grey);margin-bottom:18px;">7 Nights · 8 Days</div>
         <a href="contact.html" class="btn btn-gold">Book This Package</a>
       </div>
     </div>
 
     <div class="pkgs">
-      <div class="pkg">
-        <div class="ico">🌹</div>
+      <article class="pkg">
+        <div class="ico" aria-hidden="true">🌹</div>
         <h3>Weekend Romance</h3>
         <div class="tl">3 nights in Seminyak</div>
         <div class="pr">£899 <small>per couple</small></div>
-        <div class="dur">📅 3 Nights · 4 Days</div>
+        <div class="dur">3 Nights · 4 Days</div>
         <ul class="pkg-list">
           <li>✅ Boutique villa in Seminyak</li>
           <li>✅ Sunset dinner for two</li>
@@ -102,13 +126,13 @@
           <li class="no">❌ Flights not included</li>
         </ul>
         <a href="contact.html" class="btn btn-green" style="width:100%;text-align:center;display:block;">Book Now</a>
-      </div>
-      <div class="pkg">
-        <div class="ico">🛥️</div>
+      </article>
+      <article class="pkg">
+        <div class="ico" aria-hidden="true">🛥️</div>
         <h3>Island Hopping</h3>
         <div class="tl">Bali + Nusa Islands</div>
         <div class="pr">£1,799 <small>per couple</small></div>
-        <div class="dur">📅 6 Nights · 7 Days</div>
+        <div class="dur">6 Nights · 7 Days</div>
         <ul class="pkg-list">
           <li>✅ 3 nights Bali + 3 nights Nusa</li>
           <li>✅ Private boat crossing</li>
@@ -117,40 +141,39 @@
           <li class="no">❌ Flights not included</li>
         </ul>
         <a href="contact.html" class="btn btn-green" style="width:100%;text-align:center;display:block;">Book Now</a>
-      </div>
+      </article>
     </div>
   </div>
 </section>
 
 <!-- FAMILY PACKAGES -->
-<section class="sec bg">
+<section class="sec bg" aria-labelledby="family-heading">
   <div class="wrap">
     <span class="label">For Families</span>
-    <h2 style="margin-bottom:8px;">Family Holiday Packages</h2>
+    <h2 id="family-heading" style="margin-bottom:8px;">Family Holiday Packages</h2>
     <p class="sub">Create memories that last a lifetime — adventures for all ages.</p>
 
-    <!-- Featured family package with real photo -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;margin-bottom:32px;background:#fff;border-radius:12px;border:1px solid var(--border);overflow:hidden;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;margin-bottom:32px;background:#fff;border-radius:12px;border:2px solid var(--border);overflow:hidden;">
       <div style="padding:28px;">
-        <span class="badge bg-green" style="margin-bottom:12px;display:inline-block;">⭐ Best Value Family</span>
+        <span class="badge bg-green" style="margin-bottom:12px;display:inline-block;">Best Value Family</span>
         <h3 style="font-family:'Playfair Display',serif;font-size:24px;margin-bottom:8px;">Ultimate Family Explorer</h3>
-        <p style="font-size:13px;color:var(--grey);margin-bottom:14px;line-height:1.65">10 nights all-inclusive with return flights. Bali Safari, Ubud cultural tour, rice terrace trekking, cooking class. Kids meals free under 12.</p>
-        <div style="font-size:30px;font-weight:700;color:var(--green);margin-bottom:4px;">£4,499 <span style="font-size:13px;font-weight:400;color:var(--grey);">family of 4</span></div>
-        <div style="font-size:12px;color:var(--grey);margin-bottom:18px;">📅 10 Nights · 11 Days · Flights included</div>
+        <p style="font-size:14px;color:var(--grey);margin-bottom:14px;line-height:1.65;">10 nights all-inclusive with return flights. Bali Safari, Ubud cultural tour, rice terrace trekking, cooking class. Kids meals free under 12.</p>
+        <div style="font-size:30px;font-weight:700;color:var(--green);margin-bottom:4px;">£4,499 <span style="font-size:14px;font-weight:400;color:var(--grey);">family of 4</span></div>
+        <div style="font-size:14px;color:var(--grey);margin-bottom:18px;">10 Nights · 11 Days · Flights included</div>
         <a href="contact.html" class="btn btn-gold">Book This Package</a>
       </div>
       <div style="height:320px;">
-        <img src="https://images.unsplash.com/photo-1657555764632-25ccbe0ebb54?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Bali Family">
+        <img src="https://images.unsplash.com/photo-1657555764632-25ccbe0ebb54?q=80&w=2070&auto=format&fit=crop" alt="Happy family playing in the sea on a Bali beach holiday">
       </div>
     </div>
 
     <div class="pkgs">
-      <div class="pkg">
-        <div class="ico">🦁</div>
+      <article class="pkg">
+        <div class="ico" aria-hidden="true">🦁</div>
         <h3>Bali Family Fun</h3>
         <div class="tl">Young children friendly</div>
         <div class="pr">£2,299 <small>family of 4</small></div>
-        <div class="dur">📅 7 Nights · 8 Days</div>
+        <div class="dur">7 Nights · 8 Days</div>
         <ul class="pkg-list">
           <li>✅ Family resort + kids club</li>
           <li>✅ Bali Safari &amp; Marine Park</li>
@@ -159,13 +182,13 @@
           <li class="no">❌ Flights not included</li>
         </ul>
         <a href="contact.html" class="btn btn-green" style="width:100%;text-align:center;display:block;">Book Now</a>
-      </div>
-      <div class="pkg">
-        <div class="ico">🏄</div>
+      </article>
+      <article class="pkg">
+        <div class="ico" aria-hidden="true">🏄</div>
         <h3>Active Family</h3>
         <div class="tl">Sporty families aged 10+</div>
         <div class="pr">£3,199 <small>family of 4</small></div>
-        <div class="dur">📅 8 Nights · 9 Days</div>
+        <div class="dur">8 Nights · 9 Days</div>
         <ul class="pkg-list">
           <li>✅ Surf lessons for all ages</li>
           <li>✅ Mount Batur jeep adventure</li>
@@ -174,25 +197,25 @@
           <li class="no">❌ Flights not included</li>
         </ul>
         <a href="contact.html" class="btn btn-green" style="width:100%;text-align:center;display:block;">Book Now</a>
-      </div>
+      </article>
     </div>
   </div>
 </section>
 
 <!-- ADVENTURE PACKAGES -->
-<section class="sec">
+<section class="sec" aria-labelledby="adventure-heading">
   <div class="wrap">
     <span class="label">Solo &amp; Adventure</span>
-    <h2 style="margin-bottom:8px;">Adventure Packages</h2>
+    <h2 id="adventure-heading" style="margin-bottom:8px;">Adventure Packages</h2>
     <p class="sub">Bali's volcanic peaks, jungle rivers and ocean walls await.</p>
     <div class="pkgs">
-      <div class="pkg star">
-        <div class="pkg-top">🔥 Top Pick</div>
-        <div class="ico">🤿</div>
+      <article class="pkg star">
+        <div class="pkg-top">Top Pick</div>
+        <div class="ico" aria-hidden="true">🤿</div>
         <h3>Ultimate Adventure</h3>
         <div class="tl">Surf · Dive · Hike · Explore</div>
         <div class="pr">£1,499 <small>per person</small></div>
-        <div class="dur">📅 7 Nights · 8 Days</div>
+        <div class="dur">7 Nights · 8 Days</div>
         <ul class="pkg-list">
           <li>✅ Mount Batur sunrise hike</li>
           <li>✅ 3 surf lessons at Kuta</li>
@@ -201,13 +224,13 @@
           <li>✅ All transfers included</li>
         </ul>
         <a href="contact.html" class="btn btn-gold" style="width:100%;text-align:center;display:block;">Book Now</a>
-      </div>
-      <div class="pkg">
-        <div class="ico">🌋</div>
+      </article>
+      <article class="pkg">
+        <div class="ico" aria-hidden="true">🌋</div>
         <h3>Volcano &amp; Jungle</h3>
         <div class="tl">4-night solo adventure</div>
         <div class="pr">£799 <small>per person</small></div>
-        <div class="dur">📅 4 Nights · 5 Days</div>
+        <div class="dur">4 Nights · 5 Days</div>
         <ul class="pkg-list">
           <li>✅ Mount Batur sunrise hike</li>
           <li>✅ Ayung River rafting</li>
@@ -216,13 +239,13 @@
           <li class="no">❌ Flights not included</li>
         </ul>
         <a href="contact.html" class="btn btn-green" style="width:100%;text-align:center;display:block;">Book Now</a>
-      </div>
-      <div class="pkg">
-        <div class="ico">🧘</div>
+      </article>
+      <article class="pkg">
+        <div class="ico" aria-hidden="true">🧘</div>
         <h3>Wellness Retreat</h3>
         <div class="tl">Yoga &amp; spa in Ubud</div>
         <div class="pr">£1,299 <small>per person</small></div>
-        <div class="dur">📅 6 Nights · 7 Days</div>
+        <div class="dur">6 Nights · 7 Days</div>
         <ul class="pkg-list">
           <li>✅ Daily yoga &amp; meditation</li>
           <li>✅ 3 spa treatments</li>
@@ -231,7 +254,7 @@
           <li class="no">❌ Flights not included</li>
         </ul>
         <a href="contact.html" class="btn btn-green" style="width:100%;text-align:center;display:block;">Book Now</a>
-      </div>
+      </article>
     </div>
     <div class="center" style="margin-top:28px;">
       <p style="color:var(--grey);margin-bottom:12px;">Need something custom? We build bespoke itineraries too.</p>
@@ -240,18 +263,58 @@
   </div>
 </section>
 
-<section class="nl"><div class="wrap"><h2>Stay Inspired</h2><p>Subscribe for Bali travel tips and exclusive deals.</p><div class="nl-row"><input type="email" placeholder="Your email…"><button class="btn btn-white">Subscribe</button></div></div></section>
+<!-- NEWSLETTER -->
+<section class="nl" aria-labelledby="nl-heading">
+  <div class="wrap">
+    <h2 id="nl-heading">Stay Inspired</h2>
+    <p>Subscribe for Bali travel tips and exclusive deals.</p>
+    <div class="nl-row">
+      <label for="nl-email" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Email address</label>
+      <input type="email" id="nl-email" name="newsletter-email" placeholder="Your email…" aria-label="Email address for newsletter">
+      <button class="btn btn-white" type="button">Subscribe</button>
+    </div>
+  </div>
+</section>
 
-<footer><div class="wrap"><div class="fgrid">
-  <div class="fbrand"><div class="logo"><div class="logo-icon">🏖️</div><div><strong style="color:#fff;font-family:'Playfair Display',serif;font-size:16px;">Incredible Bali</strong><span style="font-size:10px;color:rgba(255,255,255,.4);">Island of the Gods</span></div></div><p>Official Bali Tourism portal by the Ministry of Tourism, Republic of Indonesia.</p></div>
-  <div class="fcol"><h3>Explore</h3><a href="destinations.html">Destinations</a><a href="destinations.html">Beaches</a></div>
-  <div class="fcol"><h3>Travel</h3><a href="packages.html">Packages</a><a href="services.html">Services</a></div>
-  <div class="fcol"><h3>Info</h3><a href="about.html">About Bali</a><a href="contact.html">Contact</a></div>
-</div><div class="fbot"><span>© 2025 Incredible Bali · Ministry of Tourism, Republic of Indonesia</span></div></div></footer>
-<button id="top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="fbrand">
+        <div class="logo">
+          <div class="logo-icon" aria-hidden="true">🏖️</div>
+          <div>
+            <strong style="color:#fff;font-family:'Playfair Display',serif;font-size:17px;">Incredible Bali</strong>
+            <span style="font-size:13px;color:#a8a8a8;display:block;">Island of the Gods</span>
+          </div>
+        </div>
+        <p>Official Bali Tourism portal by the Ministry of Tourism, Republic of Indonesia.</p>
+      </div>
+      <div class="fcol"><h4>Explore</h4><a href="destinations.html">Destinations</a><a href="destinations.html#south">South Bali</a></div>
+      <div class="fcol"><h4>Travel</h4><a href="packages.html">Packages</a><a href="services.html">Services</a></div>
+      <div class="fcol"><h4>Info</h4><a href="about.html">About Bali</a><a href="contact.html">Contact</a></div>
+    </div>
+    <div class="fbot"><span>© 2025 Incredible Bali · Ministry of Tourism, Republic of Indonesia</span></div>
+  </div>
+</footer>
+
+<button id="top-btn" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
 <script>
   window.addEventListener('scroll', () => document.getElementById('top-btn').classList.toggle('show', window.scrollY > 380));
-  document.querySelectorAll('.fb').forEach(b => b.addEventListener('click', () => { document.querySelectorAll('.fb').forEach(x => x.classList.remove('on')); b.classList.add('on'); }));
+  function toggleMenu(btn) {
+    var mob = document.getElementById('mob');
+    mob.classList.toggle('open');
+    btn.setAttribute('aria-expanded', mob.classList.contains('open'));
+  }
+  document.querySelectorAll('.fb').forEach(function(b) {
+    b.addEventListener('click', function() {
+      document.querySelectorAll('.fb').forEach(function(x) { x.classList.remove('on'); });
+      b.classList.add('on');
+    });
+  });
 </script>
 </body>
 </html>
