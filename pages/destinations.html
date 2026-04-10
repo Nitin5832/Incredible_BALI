@@ -9,212 +9,233 @@
 </head>
 <body>
 
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
 <div class="topbar">
-  <div class="wrap"><span>🌴 Official Bali Tourism Portal</span><div><a href="#">FAQs</a><a href="contact.html">Contact</a></div></div>
+  <div class="wrap">
+    <span>🌴 Official Bali Tourism Portal</span>
+    <nav aria-label="Utility links">
+      <a href="#">FAQs</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
 </div>
 
 <header>
   <div class="wrap">
     <div class="nav">
-      <a href="../index.html" class="logo">
-        <div class="logo-icon">🏖️</div>
+      <a href="../index.html" class="logo" aria-label="Incredible Bali – Go to homepage">
+        <div class="logo-icon" aria-hidden="true">🏖️</div>
         <div><strong>Incredible Bali</strong><span>Island of the Gods</span></div>
       </a>
-      <div class="nav-links">
-        <a href="../index.html">Home</a>
-        <a href="destinations.html" class="on">Destinations</a>
-        <a href="packages.html">Packages</a>
-        <a href="services.html">Services</a>
-        <a href="about.html">About Bali</a>
-        <a href="contact.html">Contact</a>
-      </div>
+      <nav aria-label="Main navigation">
+        <div class="nav-links">
+          <a href="../index.html">Home</a>
+          <a href="destinations.html" class="on">Destinations</a>
+          <a href="packages.html">Packages</a>
+          <a href="services.html">Services</a>
+          <a href="about.html">About Bali</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
       <div style="display:flex;gap:10px;align-items:center;">
         <a href="contact.html" class="btn btn-green" style="padding:9px 18px;font-size:13px;">Plan Trip</a>
-        <button class="burger" onclick="document.getElementById('mob').classList.toggle('open')"><span></span><span></span><span></span></button>
+        <button class="burger" aria-label="Open navigation menu" aria-expanded="false" onclick="toggleMenu(this)">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
   </div>
 </header>
 
-<div class="mob-nav" id="mob">
-  <a href="../index.html">Home</a><a href="destinations.html">Destinations</a>
-  <a href="packages.html">Packages</a><a href="services.html">Services</a>
-  <a href="about.html">About Bali</a><a href="contact.html">Contact</a>
-</div>
+<nav class="mob-nav" id="mob" aria-label="Mobile navigation">
+  <a href="../index.html">Home</a>
+  <a href="destinations.html">Destinations</a>
+  <a href="packages.html">Packages</a>
+  <a href="services.html">Services</a>
+  <a href="about.html">About Bali</a>
+  <a href="contact.html">Contact</a>
+</nav>
 
-<!-- BANNER WITH REAL PHOTO -->
-<section class="hero" style="height:55vh;min-height:360px;">
+<main id="main-content">
+
+<!-- BANNER -->
+<section class="hero" style="height:55vh;min-height:360px;" aria-label="Destinations banner">
   <div class="hero-bg">
-    <img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Bali Destinations">
+    <img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?q=80&w=2070&auto=format&fit=crop" alt="Pura Ulun Danu Bratan floating temple on Lake Beratan, Bali">
   </div>
   <div class="hero-shade"></div>
   <div class="wrap">
     <div class="hero-text">
-      <div class="crumb" style="margin-bottom:12px;"><a href="../index.html">Home</a> › <span>Destinations</span></div>
-      <h1 style="font-size:clamp(26px,4vw,42px);">Explore Bali's Destinations</h1>
+      <nav class="crumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span aria-hidden="true">›</span>
+        <span aria-current="page">Destinations</span>
+      </nav>
+      <h1>Explore Bali's Destinations</h1>
       <p>From sacred temples to volcanic peaks and pristine beaches — every corner of the Island of the Gods.</p>
     </div>
   </div>
 </section>
 
-<div class="filters">
+<div class="filters" role="navigation" aria-label="Filter destinations">
   <div class="wrap">
     <div class="frow">
-      <button class="fb on">All</button>
-      <button class="fb">Beaches</button>
-      <button class="fb">Temples</button>
-      <button class="fb">Rice Terraces</button>
-      <button class="fb">Waterfalls</button>
-      <button class="fb">Mountains</button>
+      <button class="fb on" type="button">All</button>
+      <button class="fb" type="button">Beaches</button>
+      <button class="fb" type="button">Temples</button>
+      <button class="fb" type="button">Rice Terraces</button>
+      <button class="fb" type="button">Waterfalls</button>
+      <button class="fb" type="button">Mountains</button>
     </div>
   </div>
 </div>
 
 <!-- SOUTH BALI -->
-<section class="sec">
+<section class="sec" aria-labelledby="south-heading">
   <div class="wrap">
     <span class="label">South Bali</span>
-    <h2 style="margin-bottom:22px;">South Bali</h2>
+    <h2 id="south-heading" style="margin-bottom:22px;">South Bali</h2>
     <div class="grid3">
 
-      <div class="card">
+      <article class="card">
         <div class="thumb">
-          <img src="https://images.unsplash.com/photo-1624935851312-845758a99160?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Tanah Lot Temple">
-          <div class="reg">Temple</div>
-          <div class="cap"><strong>Tanah Lot</strong><span>Sea Temple at Sunset</span></div>
+          <img src="https://images.unsplash.com/photo-1624935851312-845758a99160?q=80&w=2071&auto=format&fit=crop" alt="Tanah Lot sea temple at sunset in South Bali">
+          <div class="reg" aria-hidden="true">Temple</div>
+          <div class="cap" aria-hidden="true"><strong>Tanah Lot</strong><span>Sea Temple at Sunset</span></div>
         </div>
         <div class="body">
-          <div class="stars">★★★★★</div>
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
           <p>Bali's most photographed temple. Most stunning at golden hour — go late afternoon.</p>
           <div class="card-foot"><div class="price">IDR 60,000</div><span class="badge bg-gold">Iconic</span></div>
         </div>
-      </div>
+      </article>
 
-      <div class="card">
+      <article class="card">
         <div class="thumb">
-          <img src="https://images.unsplash.com/photo-1604842937136-1648761a6256?q=80&w=1065&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Uluwatu Temple">
-          <div class="reg">Temple</div>
-          <div class="cap"><strong>Uluwatu Temple</strong><span>Clifftop at 70m</span></div>
+          <img src="https://images.unsplash.com/photo-1604842937136-1648761a6256?q=80&w=1065&auto=format&fit=crop" alt="Uluwatu clifftop temple 70m above the Indian Ocean">
+          <div class="reg" aria-hidden="true">Temple</div>
+          <div class="cap" aria-hidden="true"><strong>Uluwatu Temple</strong><span>Clifftop at 70m</span></div>
         </div>
         <div class="body">
-          <div class="stars">★★★★★</div>
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
           <p>Dramatic clifftop temple above the ocean. Evening Kecak fire dance performances are unmissable.</p>
           <div class="card-foot"><div class="price">IDR 30,000</div><span class="badge bg-green">Cultural</span></div>
         </div>
-      </div>
+      </article>
 
-      <div class="card">
+      <article class="card">
         <div class="thumb">
-          <img src="https://images.unsplash.com/photo-1722460228785-733ae3a0e8c8?q=80&w=1035&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Kuta Seminyak Beach">
-          <div class="reg">Beach</div>
-          <div class="cap"><strong>Kuta &amp; Seminyak</strong><span>Surf &amp; Nightlife</span></div>
+          <img src="https://images.unsplash.com/photo-1722460228785-733ae3a0e8c8?q=80&w=1035&auto=format&fit=crop" alt="Kuta and Seminyak beach with surfers and golden sunset">
+          <div class="reg" aria-hidden="true">Beach</div>
+          <div class="cap" aria-hidden="true"><strong>Kuta &amp; Seminyak</strong><span>Surf &amp; Nightlife</span></div>
         </div>
         <div class="body">
-          <div class="stars">★★★★☆</div>
+          <div class="stars" aria-label="4 out of 5 stars">★★★★☆</div>
           <p>Long sandy shores, surf schools, beach clubs and Bali's most vibrant nightlife.</p>
           <div class="card-foot"><div class="price">Free Entry</div><span class="badge bg-red">Trending</span></div>
         </div>
-      </div>
+      </article>
 
     </div>
   </div>
 </section>
 
 <!-- CENTRAL BALI -->
-<section class="sec bg">
+<section class="sec bg" aria-labelledby="central-heading">
   <div class="wrap">
     <span class="label">Central Bali</span>
-    <h2 style="margin-bottom:22px;">Ubud &amp; Central Bali</h2>
+    <h2 id="central-heading" style="margin-bottom:22px;">Ubud &amp; Central Bali</h2>
     <div class="grid3">
 
-      <div class="card">
+      <article class="card">
         <div class="thumb">
-          <img src="https://images.unsplash.com/photo-1652451160926-6d0f2bb16cfe?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Ubud Bali">
-          <div class="reg">Culture</div>
-          <div class="cap"><strong>Ubud Town</strong><span>Arts, Culture &amp; Yoga</span></div>
+          <img src="https://images.unsplash.com/photo-1652451160926-6d0f2bb16cfe?q=80&w=2070&auto=format&fit=crop" alt="Ubud town surrounded by lush jungle and rice paddies">
+          <div class="reg" aria-hidden="true">Culture</div>
+          <div class="cap" aria-hidden="true"><strong>Ubud Town</strong><span>Arts, Culture &amp; Yoga</span></div>
         </div>
         <div class="body">
-          <div class="stars">★★★★★</div>
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
           <p>Ubud Palace, Sacred Monkey Forest, art markets and world-renowned yoga retreats.</p>
           <div class="card-foot"><div class="price">From £199 <small>/person</small></div><span class="badge bg-green">Culture</span></div>
         </div>
-      </div>
+      </article>
 
-      <div class="card">
+      <article class="card">
         <div class="thumb">
-          <img src="https://images.unsplash.com/photo-1735991087874-febd3c05544e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Tegalalang Rice Terraces">
-          <div class="reg">UNESCO</div>
-          <div class="cap"><strong>Tegalalang Terraces</strong><span>UNESCO Heritage</span></div>
+          <img src="https://images.unsplash.com/photo-1735991087874-febd3c05544e?q=80&w=2070&auto=format&fit=crop" alt="Tegalalang stepped rice terraces, a UNESCO World Heritage Site">
+          <div class="reg" aria-hidden="true">UNESCO</div>
+          <div class="cap" aria-hidden="true"><strong>Tegalalang Terraces</strong><span>UNESCO Heritage</span></div>
         </div>
         <div class="body">
-          <div class="stars">★★★★★</div>
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
           <p>Stunning stepped rice paddies using the ancient subak irrigation system — a UNESCO World Heritage Site.</p>
           <div class="card-foot"><div class="price">IDR 10,000</div><span class="badge bg-gold">UNESCO</span></div>
         </div>
-      </div>
+      </article>
 
-      <div class="card">
+      <article class="card">
         <div class="thumb">
-          <img src="https://images.unsplash.com/photo-1595319100995-e350a1095086?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Bali Waterfall">
-          <div class="reg">Nature</div>
-          <div class="cap"><strong>Tegenungan Waterfall</strong><span>Jungle Falls near Ubud</span></div>
+          <img src="https://images.unsplash.com/photo-1595319100995-e350a1095086?q=80&w=2070&auto=format&fit=crop" alt="Tegenungan waterfall in lush jungle near Ubud">
+          <div class="reg" aria-hidden="true">Nature</div>
+          <div class="cap" aria-hidden="true"><strong>Tegenungan Waterfall</strong><span>Jungle Falls near Ubud</span></div>
         </div>
         <div class="body">
-          <div class="stars">★★★★★</div>
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
           <p>A spectacular waterfall 5km from Ubud, surrounded by lush jungle. Perfect for a swim.</p>
           <div class="card-foot"><div class="price">IDR 20,000</div><span class="badge bg-green">Nature</span></div>
         </div>
-      </div>
+      </article>
 
     </div>
   </div>
 </section>
 
 <!-- NUSA ISLANDS & NORTH -->
-<section class="sec">
+<section class="sec" aria-labelledby="nusa-heading">
   <div class="wrap">
     <span class="label">Nusa Islands &amp; North Bali</span>
-    <h2 style="margin-bottom:22px;">Islands &amp; Volcanoes</h2>
+    <h2 id="nusa-heading" style="margin-bottom:22px;">Islands &amp; Volcanoes</h2>
     <div class="grid3">
 
-      <div class="card">
+      <article class="card">
         <div class="thumb">
-          <img src="https://images.unsplash.com/photo-1566987827585-6c556cc32848?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Kelingking Beach Nusa Penida">
-          <div class="reg">Nusa Penida</div>
-          <div class="cap"><strong>Kelingking Beach</strong><span>T-Rex Cliff Viewpoint</span></div>
+          <img src="https://images.unsplash.com/photo-1566987827585-6c556cc32848?q=80&w=1974&auto=format&fit=crop" alt="Kelingking Beach T-Rex cliff viewpoint on Nusa Penida">
+          <div class="reg" aria-hidden="true">Nusa Penida</div>
+          <div class="cap" aria-hidden="true"><strong>Kelingking Beach</strong><span>T-Rex Cliff Viewpoint</span></div>
         </div>
         <div class="body">
-          <div class="stars">★★★★★</div>
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
           <p>Bali's most dramatic viewpoint — a clifftop overlook above a pristine turquoise bay.</p>
           <div class="card-foot"><div class="price">Day trip: £89</div><span class="badge bg-green">Must See</span></div>
         </div>
-      </div>
+      </article>
 
-      <div class="card">
+      <article class="card">
         <div class="thumb">
-          <img src="https://images.unsplash.com/photo-1692810122326-11b00acfba62?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Scuba Diving Bali">
-          <div class="reg">Nusa Lembongan</div>
-          <div class="cap"><strong>Manta Point</strong><span>Swim with Manta Rays</span></div>
+          <img src="https://images.unsplash.com/photo-1692810122326-11b00acfba62?q=80&w=2070&auto=format&fit=crop" alt="Scuba diver with manta ray at Manta Point, Nusa Lembongan">
+          <div class="reg" aria-hidden="true">Nusa Lembongan</div>
+          <div class="cap" aria-hidden="true"><strong>Manta Point</strong><span>Swim with Manta Rays</span></div>
         </div>
         <div class="body">
-          <div class="stars">★★★★★</div>
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
           <p>World-famous dive spot where giant oceanic manta rays glide in clear waters.</p>
           <div class="card-foot"><div class="price">From £65 <small>/dive</small></div><span class="badge bg-red">Adventure</span></div>
         </div>
-      </div>
+      </article>
 
-      <div class="card">
+      <article class="card">
         <div class="thumb">
-          <img src="https://images.unsplash.com/photo-1712078953326-346a472bddb0?q=80&w=2944&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mount Batur Volcano">
-          <div class="reg">North Bali</div>
-          <div class="cap"><strong>Mount Batur</strong><span>Active Volcano Sunrise</span></div>
+          <img src="https://images.unsplash.com/photo-1712078953326-346a472bddb0?q=80&w=2944&auto=format&fit=crop" alt="Mount Batur active volcano at sunrise in North Bali">
+          <div class="reg" aria-hidden="true">North Bali</div>
+          <div class="cap" aria-hidden="true"><strong>Mount Batur</strong><span>Active Volcano Sunrise</span></div>
         </div>
         <div class="body">
-          <div class="stars">★★★★★</div>
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
           <p>2-hour hike to the 1,717m summit — breathtaking sunrise views over the caldera.</p>
           <div class="card-foot"><div class="price">From £45 <small>/person</small></div><span class="badge bg-red">Adventure</span></div>
         </div>
-      </div>
+      </article>
 
     </div>
     <div class="center" style="margin-top:28px;">
@@ -224,36 +245,73 @@
 </section>
 
 <!-- NEWSLETTER -->
-<section class="nl">
+<section class="nl" aria-labelledby="nl-heading">
   <div class="wrap">
-    <h2>Stay Inspired</h2>
+    <h2 id="nl-heading">Stay Inspired</h2>
     <p>Subscribe for Bali travel tips, festival dates and exclusive deals.</p>
-    <div class="nl-row"><input type="email" placeholder="Your email address…"><button class="btn btn-white">Subscribe</button></div>
+    <div class="nl-row">
+      <label for="nl-email" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Email address</label>
+      <input type="email" id="nl-email" name="newsletter-email" placeholder="Your email address…" aria-label="Email address for newsletter">
+      <button class="btn btn-white" type="button">Subscribe</button>
+    </div>
   </div>
 </section>
+
+</main>
 
 <!-- FOOTER -->
 <footer>
   <div class="wrap">
     <div class="fgrid">
       <div class="fbrand">
-        <div class="logo"><div class="logo-icon">🏖️</div><div><strong style="color:#fff;font-family:'Playfair Display',serif;font-size:16px;">Incredible Bali</strong><span style="font-size:10px;color:rgba(255,255,255,.4);">Island of the Gods</span></div></div>
+        <div class="logo">
+          <div class="logo-icon" aria-hidden="true">🏖️</div>
+          <div>
+            <strong style="color:#fff;font-family:'Playfair Display',serif;font-size:17px;">Incredible Bali</strong>
+            <span style="font-size:13px;color:#a8a8a8;display:block;">Island of the Gods</span>
+          </div>
+        </div>
         <p>Official Bali Tourism portal by the Ministry of Tourism, Republic of Indonesia.</p>
       </div>
-      <div class="fcol"><h3>Explore</h3><a href="destinations.html">Destinations</a><a href="destinations.html">Beaches</a><a href="destinations.html">Temples</a></div>
-      <div class="fcol"><h3>Travel</h3><a href="packages.html">Packages</a><a href="services.html">Services</a></div>
-      <div class="fcol"><h3>Info</h3><a href="about.html">About Bali</a><a href="contact.html">Contact</a></div>
+      <div class="fcol">
+        <h4>Explore</h4>
+        <a href="destinations.html">Destinations</a>
+        <a href="destinations.html#south">South Bali</a>
+        <a href="destinations.html#central">Central Bali</a>
+      </div>
+      <div class="fcol">
+        <h4>Travel</h4>
+        <a href="packages.html">Packages</a>
+        <a href="services.html">Services</a>
+      </div>
+      <div class="fcol">
+        <h4>Info</h4>
+        <a href="about.html">About Bali</a>
+        <a href="contact.html">Contact</a>
+        <a href="#">Privacy Policy</a>
+      </div>
     </div>
-    <div class="fbot"><span>© 2025 Incredible Bali · Ministry of Tourism, Republic of Indonesia</span></div>
+    <div class="fbot">
+      <span>© 2025 Incredible Bali · Ministry of Tourism, Republic of Indonesia</span>
+    </div>
   </div>
 </footer>
-<button id="top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<button id="top-btn" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
 <script>
   window.addEventListener('scroll', () => document.getElementById('top-btn').classList.toggle('show', window.scrollY > 380));
-  document.querySelectorAll('.fb').forEach(b => b.addEventListener('click', () => {
-    document.querySelectorAll('.fb').forEach(x => x.classList.remove('on'));
-    b.classList.add('on');
-  }));
+  function toggleMenu(btn) {
+    var mob = document.getElementById('mob');
+    mob.classList.toggle('open');
+    btn.setAttribute('aria-expanded', mob.classList.contains('open'));
+  }
+  document.querySelectorAll('.fb').forEach(function(b) {
+    b.addEventListener('click', function() {
+      document.querySelectorAll('.fb').forEach(function(x) { x.classList.remove('on'); });
+      b.classList.add('on');
+    });
+  });
 </script>
 </body>
 </html>
