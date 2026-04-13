@@ -24,7 +24,7 @@
 <header>
   <div class="wrap">
     <div class="nav">
-      <a href="../index.html" class="logo" aria-label="Incredible Bali – site logo and home link">
+      <a href="../index.html" class="logo" aria-hidden="true" tabindex="-1" focusable="false">
         <div class="logo-icon" aria-hidden="true">🏖️</div>
         <div><strong>Incredible Bali</strong><span>Island of the Gods</span></div>
       </a>
@@ -48,7 +48,7 @@
   </div>
 </header>
 
-<nav class="mob-nav" id="mob" aria-label="Mobile navigation">
+<nav class="mob-nav" id="mob" aria-label="Mobile navigation" aria-hidden="true">
   <a href="../index.html">Home</a>
   <a href="destinations.html">Destinations</a>
   <a href="packages.html">Packages</a>
@@ -355,8 +355,9 @@
 
   function toggleMenu(btn) {
     var mob = document.getElementById('mob');
-    mob.classList.toggle('open');
-    btn.setAttribute('aria-expanded', mob.classList.contains('open'));
+    var isOpen = mob.classList.toggle('open');
+    btn.setAttribute('aria-expanded', isOpen);
+    mob.setAttribute('aria-hidden', !isOpen);
   }
 
   function showOk(id) {
