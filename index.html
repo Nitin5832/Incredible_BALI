@@ -27,7 +27,7 @@
 <header>
   <div class="wrap">
     <div class="nav">
-      <a href="index.html" class="logo" aria-label="Incredible Bali home – logo">
+      <a href="index.html" class="logo" aria-hidden="true" tabindex="-1" focusable="false">
         <div class="logo-icon" aria-hidden="true">🏖️</div>
         <div>
           <strong>Incredible Bali</strong>
@@ -54,7 +54,7 @@
   </div>
 </header>
 
-<nav class="mob-nav" id="mob" aria-label="Mobile navigation">
+<nav class="mob-nav" id="mob" aria-label="Mobile navigation" aria-hidden="true">
   <a href="index.html">Home</a>
   <a href="pages/destinations.html">Destinations</a>
   <a href="pages/packages.html">Packages</a>
@@ -72,7 +72,7 @@
   </div>
   <div class="hero-shade"></div>
   <div class="wrap">
-    <div class="hero-text">
+    <div class="hero-text" style="background:rgba(0,0,0,.40);padding:32px 36px;border-radius:12px;">
       <div class="hero-tag">✦ Official Bali Tourism Portal</div>
       <h1>Welcome to<br><em>Incredible Bali</em></h1>
       <p>The Island of the Gods — ancient temples, emerald rice terraces, crystal waters and a culture unlike anywhere on Earth.</p>
@@ -80,15 +80,22 @@
         <a href="pages/destinations.html" class="btn btn-gold">Explore Destinations</a>
         <a href="pages/packages.html" class="btn btn-white">View Packages</a>
       </div>
-      <div class="hero-stats" aria-label="Bali at a glance">
-        <div><span class="n">20K+</span><span class="l">Temples</span></div>
-        <div><span class="n">120+</span><span class="l">Beaches</span></div>
-        <div><span class="n">5M+</span><span class="l">Visitors/Year</span></div>
-        <div><span class="n">4.9★</span><span class="l">Avg Rating</span></div>
-      </div>
+
     </div>
   </div>
 </section>
+
+<!-- HERO STATS BAND — solid dark bg guarantees WCAG AA contrast on all stats -->
+<div class="hero-stats-band" aria-label="Bali at a glance">
+  <div class="wrap">
+    <div class="hero-stats-row">
+      <div class="hero-stat"><span class="n">20,000+</span><span class="l">Hindu Temples</span></div>
+      <div class="hero-stat"><span class="n">120+</span><span class="l">Pristine Beaches</span></div>
+      <div class="hero-stat"><span class="n">5M+</span><span class="l">Annual Visitors</span></div>
+      <div class="hero-stat"><span class="n">4.9 ★</span><span class="l">Avg Rating</span></div>
+    </div>
+  </div>
+</div>
 
 <!-- SEARCH BAR: every label has a matching for/id -->
 <div class="searchbar" role="search">
@@ -447,8 +454,9 @@
   });
   function toggleMenu(btn) {
     var mob = document.getElementById('mob');
-    mob.classList.toggle('open');
-    btn.setAttribute('aria-expanded', mob.classList.contains('open'));
+    var isOpen = mob.classList.toggle('open');
+    btn.setAttribute('aria-expanded', isOpen);
+    mob.setAttribute('aria-hidden', !isOpen);
   }
 </script>
 
