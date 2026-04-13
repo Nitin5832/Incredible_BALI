@@ -27,7 +27,7 @@
 <header>
   <div class="wrap">
     <div class="nav">
-      <a href="index.html" class="logo" aria-hidden="true" tabindex="-1" focusable="false">
+      <a href="index.html" class="logo" aria-hidden="true" tabindex="-1">
         <div class="logo-icon" aria-hidden="true">🏖️</div>
         <div>
           <strong>Incredible Bali</strong>
@@ -86,7 +86,7 @@
 </section>
 
 <!-- HERO STATS BAND — solid dark bg guarantees WCAG AA contrast on all stats -->
-<div class="hero-stats-band" aria-label="Bali at a glance">
+<div class="hero-stats-band" role="region" aria-label="Bali at a glance">
   <div class="wrap">
     <div class="hero-stats-row">
       <div class="hero-stat"><span class="n">20,000+</span><span class="l">Hindu Temples</span></div>
@@ -152,20 +152,25 @@
     <div class="grid3">
 
       <article class="card">
-        <div class="thumb">
-          <img src="https://images.unsplash.com/photo-1652451160926-6d0f2bb16cfe?q=80&w=2070&auto=format&fit=crop" alt="Sacred Monkey Forest and rice terraces in Ubud, Bali">
-          <div class="reg" aria-hidden="true">Central Bali</div>
-          <div class="cap" aria-hidden="true"><strong>Ubud</strong><span>Cultural Heart of Bali</span></div>
+      <div class="thumb">
+        <img src="https://images.unsplash.com/photo-1652451160926-6d0f2bb16cfe?q=80&w=2070&auto=format&fit=crop" 
+             alt="Sacred Monkey Forest and rice terraces in Ubud, Bali">
+        <div class="reg" aria-hidden="true">Central Bali</div>
+        <div class="cap" aria-hidden="true">
+          <strong>Ubud</strong><span>Cultural Heart of Bali</span>
         </div>
-        <div class="body">
-          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-          <p>Sacred Monkey Forest, Ubud Palace, rice terraces and world-renowned yoga retreats.</p>
-          <div class="card-foot">
-            <div class="price">From £199 <small>/person</small></div>
-            <span class="badge bg-green">Most Visited</span>
-          </div>
+      </div>
+      <div class="body">
+        <!-- Fixed stars div -->
+        <div class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
+        <p>Sacred Monkey Forest, Ubud Palace, rice terraces and world-renowned yoga retreats.</p>
+        <div class="card-foot">
+          <div class="price">From £199 <small>/person</small></div>
+          <span class="badge bg-green">Most Visited</span>
         </div>
+      </div>
       </article>
+
 
       <article class="card">
         <div class="thumb">
