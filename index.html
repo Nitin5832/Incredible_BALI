@@ -27,7 +27,7 @@
 <header>
   <div class="wrap">
     <div class="nav">
-      <a href="index.html" class="logo" aria-hidden="true" tabindex="-1">
+      <a href="index.html" class="logo" aria-hidden="true" tabindex="-1" focusable="false">
         <div class="logo-icon" aria-hidden="true">🏖️</div>
         <div>
           <strong>Incredible Bali</strong>
@@ -86,7 +86,7 @@
 </section>
 
 <!-- HERO STATS BAND — solid dark bg guarantees WCAG AA contrast on all stats -->
-<div class="hero-stats-band" role="region" aria-label="Bali at a glance">
+<div class="hero-stats-band" aria-label="Bali at a glance">
   <div class="wrap">
     <div class="hero-stats-row">
       <div class="hero-stat"><span class="n">20,000+</span><span class="l">Hindu Temples</span></div>
@@ -140,130 +140,117 @@
 </div>
 
 <!-- DESTINATIONS -->
-    <section class="sec" aria-labelledby="dest-heading">
-      <div class="wrap">
-        <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:12px;margin-bottom:28px;">
-          <div>
-            <span class="label">Trending Now</span>
-            <h2 id="dest-heading">Top Destinations in Bali</h2>
-          </div>
-          <a href="pages/destinations.html" class="btn btn-outline">View All →</a>
-        </div>
-        <div class="grid3">
+<section class="sec" aria-labelledby="dest-heading">
+  <div class="wrap">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:12px;margin-bottom:28px;">
+      <div>
+        <span class="label">Trending Now</span>
+        <h2 id="dest-heading">Top Destinations in Bali</h2>
+      </div>
+      <a href="pages/destinations.html" class="btn btn-outline">View All →</a>
+    </div>
+    <div class="grid3">
 
-        <article class="card">
-        <h2 class="card-title">Ubud – Cultural Heart of Bali</h2>
+      <article class="card">
         <div class="thumb">
-          <img src="https://images.unsplash.com/photo-1652451160926-6d0f2bb16cfe?q=80&w=2070&auto=format&fit=crop" 
-               alt="Sacred Monkey Forest and rice terraces in Ubud, Bali">
+          <img src="https://images.unsplash.com/photo-1652451160926-6d0f2bb16cfe?q=80&w=2070&auto=format&fit=crop" alt="Sacred Monkey Forest and rice terraces in Ubud, Bali">
           <div class="reg" aria-hidden="true">Central Bali</div>
-          <div class="cap" aria-hidden="true">
-            <strong>Ubud</strong><span>Cultural Heart of Bali</span>
-          </div>
+          <div class="cap" aria-hidden="true"><strong>Ubud</strong><span>Cultural Heart of Bali</span></div>
         </div>
         <div class="body">
-          <!-- Fixed stars div -->
-          <div class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
           <p>Sacred Monkey Forest, Ubud Palace, rice terraces and world-renowned yoga retreats.</p>
           <div class="card-foot">
             <div class="price">From £199 <small>/person</small></div>
             <span class="badge bg-green">Most Visited</span>
           </div>
         </div>
-        </article>
+      </article>
 
-        <article class="card">
-        <h2 class="card-title">Tanah Lot – Iconic Sea Temple</h2>
+      <article class="card">
         <div class="thumb">
-          <img src="https://images.unsplash.com/photo-1624935851312-845758a99160?q=80&w=2071&auto=format&fit=crop" 
-               alt="Tanah Lot sea temple perched on a rocky outcrop at sunset">
+          <img src="https://images.unsplash.com/photo-1624935851312-845758a99160?q=80&w=2071&auto=format&fit=crop" alt="Tanah Lot sea temple perched on a rocky outcrop at sunset">
           <div class="reg" aria-hidden="true">South Bali</div>
-          <div class="cap" aria-hidden="true">
-            <strong>Tanah Lot</strong><span>Iconic Sea Temple</span>
-          </div>
+          <div class="cap" aria-hidden="true"><strong>Tanah Lot</strong><span>Iconic Sea Temple</span></div>
         </div>
         <div class="body">
-          <div class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
           <p>Bali's most photographed temple, perched on a rocky outcrop at sunset.</p>
           <div class="card-foot">
             <div class="price">Free Entry</div>
             <span class="badge bg-gold">Iconic</span>
           </div>
         </div>
-        </article>
+      </article>
 
-        <article class="card">
-        <h2 class="card-title">Mount Batur – Sunrise Volcano Hike</h2>
+      <article class="card">
         <div class="thumb">
-          <img src="https://images.unsplash.com/photo-1712078953326-346a472bddb0?q=80&w=2944&auto=format&fit=crop" 
-               alt="Mount Batur active volcano at sunrise in North Bali">
+          <img src="https://images.unsplash.com/photo-1712078953326-346a472bddb0?q=80&w=2944&auto=format&fit=crop" alt="Mount Batur active volcano at sunrise in North Bali">
           <div class="reg" aria-hidden="true">North Bali</div>
           <div class="cap" aria-hidden="true"><strong>Mount Batur</strong><span>Sunrise Volcano Hike</span></div>
         </div>
         <div class="body">
-          <div class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
           <p>Active volcano with one of Bali's most rewarding hikes and breathtaking sunrise views.</p>
           <div class="card-foot">
             <div class="price">From £45 <small>/person</small></div>
             <span class="badge bg-red">Adventure</span>
           </div>
         </div>
-        </article>
+      </article>
 
-        <article class="card">
-          <h2 class="card-title">Nusa Penida – Dramatic Cliffs & Beaches</h2>
-          <div class="thumb">
-            <img src="https://images.unsplash.com/photo-1566987827585-6c556cc32848?q=80&w=1974&auto=format&fit=crop" 
-                 alt="Kelingking Beach dramatic cliff viewpoint on Nusa Penida island">
-            <div class="reg" aria-hidden="true">Nusa Islands</div>
-            <div class="cap" aria-hidden="true"><strong>Nusa Penida</strong><span>Dramatic Cliffs &amp; Beaches</span></div>
+      <article class="card">
+        <div class="thumb">
+          <img src="https://images.unsplash.com/photo-1566987827585-6c556cc32848?q=80&w=1974&auto=format&fit=crop" alt="Kelingking Beach dramatic cliff viewpoint on Nusa Penida island">
+          <div class="reg" aria-hidden="true">Nusa Islands</div>
+          <div class="cap" aria-hidden="true"><strong>Nusa Penida</strong><span>Dramatic Cliffs &amp; Beaches</span></div>
+        </div>
+        <div class="body">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p>Home to Kelingking Beach — one of the world's most dramatic coastal viewpoints.</p>
+          <div class="card-foot">
+            <div class="price">From £89 <small>/day trip</small></div>
+            <span class="badge bg-green">Hidden Gem</span>
           </div>
-          <div class="body">
-            <div class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
-            <p>Home to Kelingking Beach — one of the world's most dramatic coastal viewpoints.</p>
-            <div class="card-foot">
-              <div class="price">From £89 <small>/day trip</small></div>
-              <span class="badge bg-green">Hidden Gem</span>
-            </div>
-          </div>
-        </article>
+        </div>
+      </article>
 
-        <article class="card">
-          <h2 class="card-title">Kuta & Seminyak – Surf, Sun & Nightlife</h2>
-          <div class="thumb">
-            <img src="https://images.unsplash.com/photo-1722460228785-733ae3a0e8c8?q=80&w=1035&auto=format&fit=crop" 
-                 alt="Kuta and Seminyak beach at sunset with surfers">
-            <div class="reg" aria-hidden="true">South Bali</div>
-            <div class="cap" aria-hidden="true"><strong>Kuta &amp; Seminyak</strong><span>Surf, Sun &amp; Nightlife</span></div>
+      <article class="card">
+        <div class="thumb">
+          <img src="https://images.unsplash.com/photo-1722460228785-733ae3a0e8c8?q=80&w=1035&auto=format&fit=crop" alt="Kuta and Seminyak beach at sunset with surfers">
+          <div class="reg" aria-hidden="true">South Bali</div>
+          <div class="cap" aria-hidden="true"><strong>Kuta &amp; Seminyak</strong><span>Surf, Sun &amp; Nightlife</span></div>
+        </div>
+        <div class="body">
+          <div class="stars" aria-label="4 out of 5 stars">★★★★☆</div>
+          <p>World-class surfing, beach clubs, sunset cocktails and vibrant nightlife.</p>
+          <div class="card-foot">
+            <div class="price">From £149 <small>/person</small></div>
+            <span class="badge bg-red">Trending</span>
           </div>
-          <div class="body">
-            <div class="stars" role="img" aria-label="4 out of 5 stars">★★★★☆</div>
-            <p>World-class surfing, beach clubs, sunset cocktails and vibrant nightlife.</p>
-            <div class="card-foot">
-              <div class="price">From £149 <small>/person</small></div>
-              <span class="badge bg-red">Trending</span>
-            </div>
-          </div>
-        </article>
+        </div>
+      </article>
 
-        <article class="card">
-          <h2 class="card-title">Tegalalang – UNESCO Rice Terraces</h2>
-          <div class="thumb">
-            <img src="https://images.unsplash.com/photo-1735991087874-febd3c05544e?q=80&w=2070&auto=format&fit=crop" 
-                 alt="Tegalalang UNESCO rice terraces in Central Bali">
-            <div class="reg" aria-hidden="true">Central Bali</div>
-            <div class="cap" aria-hidden="true"><strong>Tegalalang</strong><span>UNESCO Rice Terraces</span></div>
+      <article class="card">
+        <div class="thumb">
+          <img src="https://images.unsplash.com/photo-1735991087874-febd3c05544e?q=80&w=2070&auto=format&fit=crop" alt="Tegalalang UNESCO rice terraces in Central Bali">
+          <div class="reg" aria-hidden="true">Central Bali</div>
+          <div class="cap" aria-hidden="true"><strong>Tegalalang</strong><span>UNESCO Rice Terraces</span></div>
+        </div>
+        <div class="body">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p>Breathtaking UNESCO-listed rice terraces using the ancient subak irrigation system.</p>
+          <div class="card-foot">
+            <div class="price">IDR 10,000 <small>entry</small></div>
+            <span class="badge bg-gold">UNESCO</span>
           </div>
-          <div class="body">
-            <div class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
-            <p>Breathtaking UNESCO-listed rice terraces using the ancient subak irrigation system.</p>
-            <div class="card-foot">
-              <div class="price">IDR 10,000 <small>entry</small></div>
-              <span class="badge bg-gold">UNESCO</span>
-            </div>
-          </div>
-        </article>
-          
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
 <!-- STATS BAND -->
 <section class="stats-band" aria-labelledby="stats-heading">
   <div class="wrap">
@@ -373,43 +360,29 @@
     <h2 id="reviews-heading" style="margin-bottom:24px;">What Visitors Say</h2>
     <div class="grid3">
       <article class="rev">
-        <h3 class="rev-title">Review by Sarah K.</h3>
         <div class="rev-head">
           <div class="av" aria-hidden="true">SK</div>
-          <div>
-            <div class="rname">Sarah K.</div>
-            <div class="rloc">London, UK</div>
-          </div>
+          <div><div class="rname">Sarah K.</div><div class="rloc">London, UK</div></div>
         </div>
-        <div class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
         <p class="rtext">"Bali is unlike anywhere I've ever been. The temples, rice fields, the people — every day was magical. The honeymoon package was absolutely perfect."</p>
         <div class="rdest">Visited: Ubud &amp; Tanah Lot</div>
       </article>
-
       <article class="rev">
-        <h3 class="rev-title">Review by Rahul &amp; Priya</h3>
         <div class="rev-head">
           <div class="av" style="background:var(--glight);color:#0a3d32;" aria-hidden="true">RP</div>
-          <div>
-            <div class="rname">Rahul &amp; Priya</div>
-            <div class="rloc">Mumbai, India</div>
-          </div>
+          <div><div class="rname">Rahul &amp; Priya</div><div class="rloc">Mumbai, India</div></div>
         </div>
-        <div class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
         <p class="rtext">"We brought our two kids and they loved the safari and rice terrace walk. The family package was well planned and totally stress-free."</p>
         <div class="rdest">Visited: Ubud &amp; Bali Safari</div>
       </article>
-
       <article class="rev">
-        <h3 class="rev-title">Review by Jake M.</h3>
         <div class="rev-head">
           <div class="av" style="background:#fde8d8;color:#7a2000;" aria-hidden="true">JM</div>
-          <div>
-            <div class="rname">Jake M.</div>
-            <div class="rloc">Sydney, Australia</div>
-          </div>
+          <div><div class="rname">Jake M.</div><div class="rloc">Sydney, Australia</div></div>
         </div>
-        <div class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
         <p class="rtext">"Surfed Uluwatu then watched the Kecak fire dance at sunset. That alone made the entire trip worth it. Bali is unreal!"</p>
         <div class="rdest">Visited: Uluwatu &amp; Kuta</div>
       </article>
@@ -424,11 +397,13 @@
     <p>Subscribe for Bali travel tips, festival dates and exclusive deals.</p>
     <div class="nl-row">
       <label for="nl-email" class="skip-link" style="position:static;top:auto;">Email address</label>
-      <input type="email" id="nl-email" name="newsletter-email" placeholder="Your email address…">
-      <button class="btn btn-white" type="submit">Subscribe</button>
+      <input type="email" id="nl-email" name="newsletter-email" placeholder="Your email address…" aria-label="Email address for newsletter">
+      <button class="btn btn-white" type="button">Subscribe</button>
     </div>
   </div>
 </section>
+
+</main>
 
 <!-- FOOTER -->
 <footer>
